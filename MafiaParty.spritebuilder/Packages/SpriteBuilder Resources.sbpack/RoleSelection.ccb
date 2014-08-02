@@ -316,8 +316,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Mafia
-</string>
+							<string>Mafia</string>
 							<false/>
 						</array>
 					</dict>
@@ -336,7 +335,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
+							<real>45</real>
 							<integer>0</integer>
 						</array>
 					</dict>
