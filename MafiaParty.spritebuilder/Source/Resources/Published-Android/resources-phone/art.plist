@@ -20,7 +20,7 @@
 		<key>art/mafialogo.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 53}, {100, 100}}</string>
+			<string>{{1, 105}, {100, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -29,6 +29,19 @@
 			<string>{{0, 0}, {100, 100}}</string>
 			<key>sourceSize</key>
 			<string>{100, 100}</string>
+		</dict>
+		<key>art/nexbutton.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 53}, {250, 50}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {250, 50}}</string>
+			<key>sourceSize</key>
+			<string>{250, 50}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>
