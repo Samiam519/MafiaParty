@@ -7,11 +7,11 @@
 		<key>art/facebookbutton.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1}, {250, 50}}</string>
+			<string>{{105, 1}, {250, 50}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {250, 50}}</string>
 			<key>sourceSize</key>
@@ -20,7 +20,7 @@
 		<key>art/mafialogo.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 105}, {100, 100}}</string>
+			<string>{{157, 1}, {100, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -33,11 +33,24 @@
 		<key>art/nexbutton.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 53}, {250, 50}}</string>
+			<string>{{1, 1}, {250, 50}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {250, 50}}</string>
+			<key>sourceSize</key>
+			<string>{250, 50}</string>
+		</dict>
+		<key>art/unlockbutton.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{53, 1}, {250, 50}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {250, 50}}</string>
 			<key>sourceSize</key>
@@ -49,7 +62,7 @@
 		<key>format</key>
 		<integer>2</integer>
 		<key>size</key>
-		<string>{256, 256}</string>
+		<string>{512, 256}</string>
 		<key>textureFileName</key>
 		<string>art.png</string>
 	</dict>
