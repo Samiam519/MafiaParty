@@ -12,7 +12,11 @@
 
 //-(void)performNightAction
 //{
+<<<<<<< HEAD
 //    NSString verdict = @"not ";
+=======
+//    NSString *verdict = @"not ";
+>>>>>>> 21d53dc6348478765a1e686c2c8023f11a15e32e
 //    if ([self checkGuilt:selectedPlayer])
 //    {
 //        verdict = @"";

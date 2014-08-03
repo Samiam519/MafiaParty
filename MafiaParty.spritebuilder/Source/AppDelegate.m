@@ -24,7 +24,6 @@
  */
 
 #import "cocos2d.h"
-
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 
@@ -62,6 +61,30 @@
     BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
     // add any app-specific handling code here
     return wasHandled;
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    [super applicationDidEnterBackground:application];
+    [[CCDirector sharedDirector] stopAnimation];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    [super applicationWillEnterForeground:application];
+    [[CCDirector sharedDirector] startAnimation];
+}
+
+-(void) applicationWillResignActive:(UIApplication *)application
+{
+    [super applicationWillResignActive:application];
+    [[CCDirector sharedDirector] pause];
+}
+
+-(void) applicationDidBecomeActive:(UIApplication *)application
+{
+    [super applicationDidBecomeActive:application];
+    [[CCDirector sharedDirector] resume];
 }
 
 - (CCScene*) startScene

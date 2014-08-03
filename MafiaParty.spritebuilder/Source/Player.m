@@ -62,6 +62,7 @@
     screenTouched = true;
 }
 
+<<<<<<< HEAD
 
 -(void)setDead
 {
@@ -72,5 +73,16 @@
 {
     self.isSaved = true;
 }
+=======
+//-(void)setDead
+//{
+//    self.isDead = true;
+//}
+//
+//-(void)savePlayer
+//{
+//    self.isSaved = true;
+//}
+>>>>>>> 21d53dc6348478765a1e686c2c8023f11a15e32e
 
 @end

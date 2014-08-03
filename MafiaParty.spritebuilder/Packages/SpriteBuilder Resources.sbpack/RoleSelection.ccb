@@ -211,8 +211,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.1028857231140137</real>
+							<real>0.87557721138000488</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -393,11 +393,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.30000001192092896</real>
-							<real>0.05000000074505806</real>
+							<real>100</real>
+							<real>29.4000244140625</real>
 							<integer>2</integer>
-							<integer>2</integer>
-							<integer>2</integer>
+							<integer>0</integer>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -418,8 +418,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.1461765766143799</real>
+							<real>0.85248482227325439</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -431,8 +431,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Mafia
-</string>
+							<string>Mafia</string>
 							<false/>
 						</array>
 					</dict>
@@ -776,8 +775,6 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1145,8 +1142,8 @@ your gang:</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.69999998807907104</real>
+							<real>0.49687498807907104</real>
+							<real>0.69823944568634033</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1183,7 +1180,7 @@ your gang:</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Who do you want to</string>
+							<string>Who do you want to kill?</string>
 							<false/>
 						</array>
 					</dict>
@@ -1390,7 +1387,7 @@ your gang:</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Write some words</string>
+							<string>Fill this out, would you?</string>
 							<false/>
 						</array>
 					</dict>
@@ -1653,6 +1650,8 @@ your gang:</string>
 						<integer>17</integer>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
