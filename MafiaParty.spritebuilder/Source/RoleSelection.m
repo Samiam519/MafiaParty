@@ -67,7 +67,10 @@
     
     for (int n = 0; n < _iconNode.children.count; n++)
     {
-        ((Player *)_iconNode.children[n]).icon = ((Player *)_playerArray[n]).icon;
+        Player *childSprite = _iconNode.children[n];
+        Player *curPlayer = _playerArray[n];
+        childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
+        childSprite.FBname = curPlayer.FBname;
     }
 
 }

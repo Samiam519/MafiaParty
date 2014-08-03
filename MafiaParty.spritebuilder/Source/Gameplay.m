@@ -20,23 +20,24 @@
     Player *myself;
     CCNode *_iconNode;
     Firebase *_myRootRef;
+    int indexOFMYSELF;
 }
 
-+(CCScene*)sendTheArray:(NSMutableArray*)theArray{
++(CCScene*)sendMySelf:(int)indexOfSelf{
     CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithArray:(NSMutableArray*)theArray]];
+    [newScene addChild:[self gameplayWithSelf:(int)indexOfSelf]];
     return newScene;
 }
 
-+(id)gameplayWithArray:(NSMutableArray*)theArray{
-    return [[self alloc]initWithAnArray:(NSMutableArray*)theArray];
++(id)gameplayWithSelf:(int)indexOfSelf{
+    return [[self alloc]initWithMySelfIndex:(int)indexOfSelf];
 }
 
--(id)initWithAnArray:(NSMutableArray*)theArray{
-    _playerArray = [NSMutableArray array];
+-(id)initWithMySelfIndex:(int)indexOfSelf{
+    
     
     if((self = (Gameplay *) [CCBReader load:@"Gameplay"])){
-        _playerArray = theArray;
+        indexOFMYSELF = indexOfSelf;
     }
     return self;
 }

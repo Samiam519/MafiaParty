@@ -20,7 +20,7 @@
 		<key>art/facebookbutton.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 205}, {500, 100}}</string>
+			<string>{{1, 103}, {500, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -59,7 +59,7 @@
 		<key>art/nexbutton.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 1}, {500, 100}}</string>
+			<string>{{1, 205}, {500, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -69,10 +69,23 @@
 			<key>sourceSize</key>
 			<string>{500, 100}</string>
 		</dict>
+		<key>art/twittericon.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{303, 307}, {50, 50}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {50, 50}}</string>
+			<key>sourceSize</key>
+			<string>{50, 50}</string>
+		</dict>
 		<key>art/unlockbutton.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 103}, {500, 100}}</string>
+			<string>{{1, 1}, {500, 100}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>

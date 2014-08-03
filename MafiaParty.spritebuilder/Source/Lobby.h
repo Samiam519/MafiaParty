@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSMutableArray *otherPlayers;
 
++(CCScene*)sendMySelf:(NSString*)UID;
+
 @end

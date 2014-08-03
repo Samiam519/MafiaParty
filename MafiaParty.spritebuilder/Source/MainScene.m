@@ -8,7 +8,7 @@
 
 #import "MainScene.h"
 #import "Player.h"
-
+#import "Lobby.h"
 
 static NSCache *profilePictureCache;
 
@@ -18,6 +18,7 @@ static NSCache *profilePictureCache;
     Firebase *_authRef;
     CCSprite *_IMAGE;
     CCSprite *_testSprite;
+    NSString* addUserRefID;
 }
 
 -(void)didLoadFromCCB{
@@ -57,7 +58,7 @@ static NSCache *profilePictureCache;
 }
 
 -(void)logInWithFacebook{
-    
+    Firebase *addingUserRef = [_myRootRef childByAutoId];
     [_authClient loginToFacebookAppWithId:@"750925491636225" permissions:@[@"email"]
                                  audience:ACFacebookAudienceOnlyMe
                       withCompletionBlock:^(NSError *error, FAUser *user) {
@@ -82,18 +83,10 @@ static NSCache *profilePictureCache;
                               CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
                               _IMAGE.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
                               [_me setMe:_tempName andMyPicture:_IMAGE];
-                              //                             Firebase* postsRef = [[Firebase alloc] initWithUrl: @"https://mafiagame.firebaseio.com/games/users/"];
-                              //
-                              //                             [postsRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-                              //                                 NSLog(@"%@", snapshot.value);
-                              //                             } withCancelBlock:^(NSError *error) {
-                              //                                 NSLog(@"%@", error.description);
-                              //                             }];
-                              
                               // New Firebase Reference for a new /sites
-                              Firebase *addRef = [[Firebase alloc]initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+//                              Firebase *addRef = [[Firebase alloc]initWithUrl:@"https://mafiagame.firebaseio.com/games"];
                               // Reference for adding Child( /sites ) using autoID
-                              Firebase *addingUserRef = [addRef childByAutoId];
+                              
                               
                               // Data has to be NSDick
                               NSDictionary *sentData = @{@"Name": _tempName,
@@ -101,7 +94,7 @@ static NSCache *profilePictureCache;
                               // Set Value
                               [addingUserRef setValue:sentData];
                               
-                              NSString* addUserRefID = addingUserRef.name;
+                              addUserRefID = [NSString stringWithFormat:@"%@",addingUserRef.name];
                               [[NSNotificationCenter defaultCenter] postNotificationName:@"THE ID" object:addUserRefID];
                           }
                       }];
@@ -112,13 +105,13 @@ static NSCache *profilePictureCache;
     //        BOOL isAuthenticated = [snapshot.value boolValue];
     ////        CCLOG(isAuthenticated ? @"Yes" : @"No");
     //    }];
-    
+    addUserRefID = [NSString stringWithFormat:@"%@",addingUserRef.name];
     
     [self toTheLobby];
 }
 
 -(void) toTheLobby {
-    CCScene *lobby = [CCBReader loadAsScene:@"Lobby"];
+    CCScene *lobby = [Lobby sendMySelf:addUserRefID];
     [[CCDirector sharedDirector] replaceScene:lobby];
 }
 
