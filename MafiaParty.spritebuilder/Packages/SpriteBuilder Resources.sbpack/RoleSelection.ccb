@@ -431,8 +431,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Mafia
-</string>
+							<string>Mafia</string>
 							<false/>
 						</array>
 					</dict>
@@ -568,6 +567,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -776,8 +777,6 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

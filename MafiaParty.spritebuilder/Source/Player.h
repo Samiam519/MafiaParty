@@ -10,6 +10,13 @@
 
 @interface Player : CCNode
 
+@property (nonatomic,assign)  BOOL isDead;
+@property (nonatomic,assign)  BOOL isSaved;
+@property (nonatomic,strong)  CCSprite *icon;
+@property (nonatomic,strong)  NSString *name;
+
+-(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
+
 -(void)performNightAction;
 
 -(void)setDead;

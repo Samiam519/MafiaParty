@@ -7,11 +7,18 @@
 //
 
 #import "MainScene.h"
+#import "Player.h"
+
+
+static NSCache *profilePictureCache;
 
 @implementation MainScene{
     Firebase *_myRootRef;
     FirebaseSimpleLogin *_authClient;
     Firebase *_authRef;
+    Player *_me;
+    CCSprite *_IMAGE;
+    CCSprite *_testSprite;
 }
 
 -(void)didLoadFromCCB{
@@ -49,11 +56,40 @@
                              // There was an error logging in
                          } else {
                              // We have a logged in Facebook user
+                             NSDictionary *newUser = user.thirdPartyUserData;
+                             
+                             NSString *_tempName = [newUser valueForKey:@"displayName"];
+                             CCLOG(@"NAME : %@",_tempName);
+                             NSURL *_tempImage = [NSURL URLWithString:[newUser valueForKey:@"picture"][@"data"][@"url"]] ;
+                             NSString *_tempImagez = [newUser valueForKey:@"picture"][@"data"][@"url"] ;
+                             CCLOG(@"URL : %@", _tempImage);
+//                             UIImage *icon = [[UIImage alloc] initWithContentsOfFile:_tempImagez];
+//                             CCTexture *texture = [[CCTexture alloc] initWithCGImage:icon.CGImage contentScale:1.f];
+//                             [_IMAGE setTexture:texture];
+//                             [profilePictureCache setObject:texture forKey:[newUser valueForKey:@"id"]];
+                             
+                             NSURL *url = [NSURL URLWithString:_tempImagez];
+                             NSData *data = [NSData dataWithContentsOfURL:url];
+                             UIImage *image = [UIImage imageWithData:data];
+//                             NSURL *url = [NSURL URLWithString:_tempImagez];
+//                             NSData *data = [NSData dataWithContentsOfURL:url];
+//                             UIImage *img = [[UIImage alloc] initWithData:data];
+//                             CCSprite*  sprite = [[CCSprite alloc] initWithCGImage: [img CGImage] key: @"_IMAGE"] ;
+                             _testSprite.visible = false;
+                             //convert UIImage to CCSprite
+                             CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
+//                             [_IMAGE setTexture:texture];
+//                             [_IMAGE setTextureRect:CGRectMake(0.f, 0.f, 100.f, 100.f)];
+                             _IMAGE.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
+                             //[profilePictureCache setObject:texture forKey:[newUser valueForKey:@"username"]];
+                             
                          }
                      }];
+    
     _authRef = [_myRootRef.root childByAppendingPath:@".info/authenticated"];
     [_authRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot* snapshot) {
         BOOL isAuthenticated = [snapshot.value boolValue];
+        CCLOG(isAuthenticated ? @"Yes" : @"No");
     }];
 }
 

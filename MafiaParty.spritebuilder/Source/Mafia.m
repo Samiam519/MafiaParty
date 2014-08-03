@@ -12,7 +12,7 @@
 
 -(void)performNightAction
 {
-    [selectedPlayer setDead];
+//    [selectedPlayer setDead];
 }
 
 @end

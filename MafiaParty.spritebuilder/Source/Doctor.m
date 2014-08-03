@@ -12,7 +12,7 @@
 
 -(void)performNightAction
 {
-    [selectedPlayer savePlayer];
+//    [selectedPlayer savePlayer];
 }
 
 @end

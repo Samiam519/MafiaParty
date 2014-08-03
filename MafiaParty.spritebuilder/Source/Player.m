@@ -8,17 +8,20 @@
 
 #import "Player.h"
 
-@implementation Player
-{
-    NSString *name;
+@implementation Player{
+//    NSString *name;
     NSString *typeOfDeath;
     NSMutableArray *lynchStrings;
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
-    CCSprite *icon;
+//    CCSprite *icon;
     Player *selectedPlayer;
-    bool isDead;
-    bool isSaved;
+
+}
+
+-(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{
+    _name = myName;
+    _icon = myPicture;
 }
 
 -(void)performNightAction
@@ -28,12 +31,12 @@
 
 -(void)setDead
 {
-    self.isDead = true;
+    _isDead = true;
 }
 
 -(void)savePlayer
 {
-    self.isSaved = true;
+    _isSaved = true;
 }
 
 @end
