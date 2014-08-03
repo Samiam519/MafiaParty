@@ -16,6 +16,10 @@
 		708BC2E8198D87490066F9DE /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2E7198D87490066F9DE /* Gameplay.m */; };
 		708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2EB198D89710066F9DE /* RoleSelection.m */; };
 		70C78AED198DB936000B04AF /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C78AEC198DB936000B04AF /* Images-2.xcassets */; };
+		70C78AF7198DD951000B04AF /* Lobby.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78AF6198DD951000B04AF /* Lobby.m */; };
+		70C78AFB198DDAC7000B04AF /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78AFA198DDAC7000B04AF /* Store.m */; };
+		70C78B00198DDCB5000B04AF /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78AFF198DDCB5000B04AF /* Results.m */; };
+		70C78B03198DDD44000B04AF /* VoteScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78B02198DDD44000B04AF /* VoteScreen.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		927F619E196C771E000F43EF /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7378993180767190076A88C /* MainScene.m */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
@@ -147,7 +151,7 @@
 		5B121013197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121015197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B12101B19748413004C1E1D /* MafiaPartyActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MafiaPartyActivity.java; sourceTree = "<group>"; };
-		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = archive.jar; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MafiaPartyActivity.h; path = Source/MafiaPartyActivity.h; sourceTree = "<group>"; };
 		5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MafiaPartyActivity.m; path = Source/MafiaPartyActivity.m; sourceTree = "<group>"; };
 		5B121033197485FE004C1E1D /* Android-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Android-Info.plist"; sourceTree = "<group>"; };
@@ -158,6 +162,14 @@
 		708BC2EA198D89710066F9DE /* RoleSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoleSelection.h; path = Source/RoleSelection.h; sourceTree = "<group>"; };
 		708BC2EB198D89710066F9DE /* RoleSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoleSelection.m; path = Source/RoleSelection.m; sourceTree = "<group>"; };
 		70C78AEC198DB936000B04AF /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "MafiaParty/Images-2.xcassets"; sourceTree = SOURCE_ROOT; };
+		70C78AF5198DD951000B04AF /* Lobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lobby.h; path = Source/Lobby.h; sourceTree = "<group>"; };
+		70C78AF6198DD951000B04AF /* Lobby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lobby.m; path = Source/Lobby.m; sourceTree = "<group>"; };
+		70C78AF9198DDAC7000B04AF /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = Source/Store.h; sourceTree = "<group>"; };
+		70C78AFA198DDAC7000B04AF /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Store.m; path = Source/Store.m; sourceTree = "<group>"; };
+		70C78AFE198DDCB5000B04AF /* Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Results.h; path = Source/Results.h; sourceTree = "<group>"; };
+		70C78AFF198DDCB5000B04AF /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Source/Results.m; sourceTree = "<group>"; };
+		70C78B01198DDD44000B04AF /* VoteScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteScreen.h; sourceTree = "<group>"; };
+		70C78B02198DDD44000B04AF /* VoteScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteScreen.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* MafiaPartyAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaPartyAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CA5F4C198DB556008AD380 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -354,24 +366,27 @@
 			isa = PBXGroup;
 			children = (
 				5B12101719748413004C1E1D /* java */,
+				F4510E9F198DE544000E520F /* Roles */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */,
 				5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				70C78AF5198DD951000B04AF /* Lobby.h */,
+				70C78AF6198DD951000B04AF /* Lobby.m */,
+				70C78AF9198DDAC7000B04AF /* Store.h */,
+				70C78AFA198DDAC7000B04AF /* Store.m */,
 				708BC2E6198D87490066F9DE /* Gameplay.h */,
 				708BC2E7198D87490066F9DE /* Gameplay.m */,
 				F4510E77198DAF8B000E520F /* Player.h */,
 				F4510E78198DAF8B000E520F /* Player.m */,
-				F4510E7E198DB137000E520F /* Mafia.h */,
-				F4510E7F198DB137000E520F /* Mafia.m */,
-				F4510E81198DB25D000E520F /* Doctor.h */,
-				F4510E82198DB25D000E520F /* Doctor.m */,
-				F4510E84198DB2B6000E520F /* Police.h */,
-				F4510E85198DB2B6000E520F /* Police.m */,
 				708BC2EA198D89710066F9DE /* RoleSelection.h */,
 				708BC2EB198D89710066F9DE /* RoleSelection.m */,
+				70C78AFE198DDCB5000B04AF /* Results.h */,
+				70C78AFF198DDCB5000B04AF /* Results.m */,
+				70C78B01198DDD44000B04AF /* VoteScreen.h */,
+				70C78B02198DDD44000B04AF /* VoteScreen.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -481,6 +496,19 @@
 				B73789861807631A0076A88C /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4510E9F198DE544000E520F /* Roles */ = {
+			isa = PBXGroup;
+			children = (
+				F4510E7E198DB137000E520F /* Mafia.h */,
+				F4510E7F198DB137000E520F /* Mafia.m */,
+				F4510E81198DB25D000E520F /* Doctor.h */,
+				F4510E82198DB25D000E520F /* Doctor.m */,
+				F4510E84198DB2B6000E520F /* Police.h */,
+				F4510E85198DB2B6000E520F /* Police.m */,
+			);
+			name = Roles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,7 +624,7 @@
 		};
 		5B121003197481CE004C1E1D /* cocos2dJava.jar */ = {
 			isa = PBXReferenceProxy;
-			fileType = compiled.java.jar;
+			fileType = archive.jar;
 			path = cocos2dJava.jar;
 			remoteRef = 5B121002197481CE004C1E1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -713,11 +741,15 @@
 			files = (
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				708BC2E8198D87490066F9DE /* Gameplay.m in Sources */,
+				70C78B03198DDD44000B04AF /* VoteScreen.m in Sources */,
+				70C78B00198DDCB5000B04AF /* Results.m in Sources */,
+				70C78AF7198DD951000B04AF /* Lobby.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				F4510E86198DB2B6000E520F /* Police.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				F4510E79198DAF8B000E520F /* Player.m in Sources */,
 				F4510E80198DB137000E520F /* Mafia.m in Sources */,
+				70C78AFB198DDAC7000B04AF /* Store.m in Sources */,
 				F4510E83198DB25D000E520F /* Doctor.m in Sources */,
 				708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */,
 			);
@@ -770,6 +802,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -805,6 +838,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -829,6 +863,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -877,6 +912,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;

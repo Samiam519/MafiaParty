@@ -4,6 +4,19 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		<key>art/backButton.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{402, 607}, {196, 200}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {196, 200}}</string>
+			<key>sourceSize</key>
+			<string>{196, 200}</string>
+		</dict>
 		<key>art/facebookbutton.png</key>
 		<dict>
 			<key>frame</key>
