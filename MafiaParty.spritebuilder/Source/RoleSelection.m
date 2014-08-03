@@ -11,7 +11,10 @@
 
 @implementation RoleSelection
 {
-    // Player i-var
+    // Array of roles
+    NSArray *_rolesArray;
+    
+    // Player
     Player *player;
     
     // Labels
@@ -26,6 +29,7 @@
     CCTextField *_verbTextField;
     CCTextField *_adjectiveTextField;
     
+    // Gradient background
     CCNodeGradient *_backgroundGradient; //change color based on role
 }
 
@@ -37,6 +41,12 @@
     // Set player booleans
     player.isDead = false;
     player.isSaved = false;
+    
+    // Initialize Arrays
+    _rolesArray = [[NSArray alloc] init];
+    self.nounArray = [[NSMutableArray alloc] init];
+    self.verbArray = [[NSMutableArray alloc] init];
+    self.adjectiveArray = [[NSMutableArray alloc] init];
     
     // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
@@ -54,7 +64,36 @@
     [[CCDirector sharedDirector] replaceScene:results];
 }
 
+#pragma mark - Word Getters
 
+- (void)getNoun
+{
+    // Add text to array
+    [_nounArray addObject:_nounTextField.textField.text];
+    
+    // Send array to Firebase
+    
+}
+
+- (void)getVerb
+{
+    // Add text to array
+    [_verbArray addObject:_verbTextField.textField.text];
+    
+    // Send array to Firebase
+
+}
+
+- (void)getAdjective
+{
+    // Add text to array
+    [_adjectiveArray addObject:_adjectiveTextField.textField.text];
+    
+    // Send array to Firebase
+
+}
+
+#pragma mark - Player methods
 
 - (void)performNightAction
 {

@@ -1355,6 +1355,14 @@ your gang:</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>labelColor|Highlighted</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -1537,6 +1545,8 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2022,7 +2032,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>getNoun</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2149,7 +2159,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>getAdjective</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2276,7 +2286,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>getVerb</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -3399,8 +3409,6 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

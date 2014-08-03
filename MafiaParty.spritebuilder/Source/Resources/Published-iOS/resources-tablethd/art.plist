@@ -30,6 +30,19 @@
 			<key>sourceSize</key>
 			<string>{1000, 200}</string>
 		</dict>
+		<key>art/facebookbuttonsmall.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{402, 809}, {196, 200}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {196, 200}}</string>
+			<key>sourceSize</key>
+			<string>{196, 200}</string>
+		</dict>
 		<key>art/mafialogo.png</key>
 		<dict>
 			<key>frame</key>
