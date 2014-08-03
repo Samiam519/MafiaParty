@@ -76,6 +76,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    //TODO: RETURN TO FIRST LOGIN SCREEN
     [super applicationWillEnterForeground:application];
     [[CCDirector sharedDirector] startAnimation];
 }
