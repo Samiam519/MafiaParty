@@ -71,17 +71,12 @@ static NSCache *profilePictureCache;
                              NSURL *url = [NSURL URLWithString:_tempImagez];
                              NSData *data = [NSData dataWithContentsOfURL:url];
                              UIImage *image = [UIImage imageWithData:data];
-//                             NSURL *url = [NSURL URLWithString:_tempImagez];
-//                             NSData *data = [NSData dataWithContentsOfURL:url];
-//                             UIImage *img = [[UIImage alloc] initWithData:data];
-//                             CCSprite*  sprite = [[CCSprite alloc] initWithCGImage: [img CGImage] key: @"_IMAGE"] ;
+
                              _testSprite.visible = false;
                              //convert UIImage to CCSprite
                              CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
-//                             [_IMAGE setTexture:texture];
-//                             [_IMAGE setTextureRect:CGRectMake(0.f, 0.f, 100.f, 100.f)];
                              _IMAGE.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
-                             //[profilePictureCache setObject:texture forKey:[newUser valueForKey:@"username"]];
+
                              
                          }
                      }];
