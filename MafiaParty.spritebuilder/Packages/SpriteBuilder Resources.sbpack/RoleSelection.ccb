@@ -776,8 +776,6 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1597,7 +1595,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_noun1TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1724,7 +1722,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_noun2TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1851,7 +1849,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_adjective1TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1978,7 +1976,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_adjective2TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2034,6 +2032,8 @@ your gang:</string>
 						<integer>17</integer>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2105,7 +2105,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_verb2TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2232,7 +2232,7 @@ your gang:</string>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>_verb1TextField</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2400,7 +2400,7 @@ your gang:</string>
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.60000002384185791</real>
+							<real>0.56999999284744263</real>
 							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2980,7 +2980,7 @@ your gang:</string>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>NightGameplay</string>
+		<string>RoleSelection</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

@@ -10,19 +10,19 @@
 
 @implementation Police
 
--(void)performNightAction
-{
-    NSString verdict = @"not ";
-    if ([self checkGuilt:selectedPlayer])
-    {
-        verdict = @"";
-    }
-    CCLOG(@"%s is %smafia", selectedPlayer.name, verdict);
-}
-
--(bool)checkGuilt:(Player *)suspect
-{
-    return [suspect isKindOfClass:[Mafia class]];
-}
+//-(void)performNightAction
+//{
+//    NSString *verdict = @"not ";
+//    if ([self checkGuilt:selectedPlayer])
+//    {
+//        verdict = @"";
+//    }
+//    CCLOG(@"%s is %smafia", selectedPlayer.name, verdict);
+//}
+//
+//-(bool)checkGuilt:(Player *)suspect
+//{
+//    return [suspect isKindOfClass:[Mafia class]];
+//}
 
 @end

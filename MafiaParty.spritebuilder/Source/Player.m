@@ -26,14 +26,14 @@
     //Add code for getting strings
 }
 
--(void)setDead
-{
-    self.isDead = true;
-}
-
--(void)savePlayer
-{
-    self.isSaved = true;
-}
+//-(void)setDead
+//{
+//    self.isDead = true;
+//}
+//
+//-(void)savePlayer
+//{
+//    self.isSaved = true;
+//}
 
 @end

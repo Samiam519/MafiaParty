@@ -10,9 +10,9 @@
 
 @implementation Mafia
 
--(void)performNightAction
-{
-    [selectedPlayer setDead];
-}
+//-(void)performNightAction
+//{
+//    [selectedPlayer setDead];
+//}
 
 @end
