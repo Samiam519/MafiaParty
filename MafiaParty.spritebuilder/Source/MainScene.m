@@ -41,6 +41,7 @@ static NSCache *profilePictureCache;
         }
     }];
 }
+
 -(void)startGame
 {
     
@@ -85,11 +86,6 @@ static NSCache *profilePictureCache;
 -(void) toTheLobby {
     CCScene *lobby = [CCBReader loadAsScene:@"Lobby"];
     [[CCDirector sharedDirector] replaceScene:lobby];
-}
-
--(void)results{
-    CCScene *results = (CCScene *)[CCBReader load:@"Results"];
-    [[CCDirector sharedDirector] replaceScene:results];
 }
 
 @end
