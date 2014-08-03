@@ -51,6 +51,11 @@
     return self;
 }
 
+-(void)didLoadFromCCB
+{
+    _role = @"citizen";
+}
+
 - (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture
 {
     // Set facebook name and picture for current user

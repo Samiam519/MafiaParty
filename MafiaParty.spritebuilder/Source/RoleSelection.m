@@ -93,7 +93,7 @@
             childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
             childSprite.FBname = curPlayer.FBname;
         }
-        [self assignRoles:_playerArray];
+        [self assignRolesToArray:_playerArray];
     }
     return self;
 }
@@ -229,6 +229,60 @@
     }
 }
 
+-(void)assignRolesToArray:(NSMutableArray *)players
+{
+    NSMutableArray *alreadyAssigned = [NSMutableArray array];
+    int mafiaToAssign;
+    if (players.count >= 11) {
+        mafiaToAssign = 3;
+    }
+    else if (players.count >= 7) {
+        mafiaToAssign = 2;
+    }
+    else {
+        mafiaToAssign = 1;
+    }
+    int i = 0;
+    while (i < mafiaToAssign)
+    {
+        int randNum = arc4random() % players.count;
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"mafia";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    i = 0;
+    while (i < 1)
+    {
+        int randNum = [self randomNumberUpTo:players.count];
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"doctor";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    while (i < 1)
+    {
+        int randNum = [self randomNumberUpTo:players.count];
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"police";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    
+}
+
 - (void)update:(CCTime)delta
 {
     for (Player* curPlayer in _iconNode.children)
@@ -269,6 +323,9 @@
 
 }
 
-
+-(int)randomNumberUpTo:(int)num
+{
+    return arc4random() % num;
+}
 
 @end
