@@ -11,20 +11,57 @@
 @implementation Player
 {
     NSString *name;
+    NSString *role;
     NSString *typeOfDeath;
-    NSMutableArray *lynchStrings;
-    NSMutableArray *murderStrings;
-    NSMutableArray *saveStrings;
+    NSString *word;
     CCSprite *icon;
     Player *selectedPlayer;
     bool isDead;
     bool isSaved;
+    bool hasSelected;
+    
+    
+    bool screenTouched;
+}
+
+
+-(void)didLoadFromCCB
+{
+    hasSelected = false;
+    isDead = false;
+    isSaved = false;
+    screenTouched = false;
+}
+
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    screenTouched = true;
 }
 
 -(void)performNightAction
 {
-    //Add code for getting strings
+    if (role == @"citizen")
+    {
+        CCLOG(@"Choose a word!");
+    }
+    
+    else if (role == "mafia")
+    {
+        CCLOG(@"Choose someone to kill!");
+    }
+    
+    else if (role == "police")
+    {
+        CCLOG(@"Choose someone to investigate!");
+    }
+    
+    else if (role == "doctor")
+    {
+        CCLOG(@"Choose someone to save!");
+    }
+    screenTouched = true;
 }
+
 
 -(void)setDead
 {

@@ -10,9 +10,9 @@
 
 @implementation Doctor
 
--(void)performNightAction
-{
-    [selectedPlayer savePlayer];
-}
+//-(void)performNightAction
+//{
+//    [selectedPlayer savePlayer];
+//}
 
 @end
