@@ -56,15 +56,15 @@
     _storyLabel.string = _eachLine[randomIndex];
     
     // Find all nouns in the story and replace them
-    for(NSString *noun in _eachLine[randomIndex])
-    {
-        if ([noun isEqualToString:@"<noun>"])
-        {
-            // Replace it with a random noun
-            randomNoun = arc4random() % [roleSelectionContent.nounArray count];
-            //noun = roleSelectionContent.nounArray[randomNoun];
-        }
-    }
+//    for(NSString *noun in _eachLine[randomIndex])
+//    {
+//        if ([noun isEqualToString:@"<noun>"])
+//        {
+//            // Replace it with a random noun
+//            randomNoun = arc4random() % [roleSelectionContent.nounArray count];
+//            //noun = roleSelectionContent.nounArray[randomNoun];
+//        }
+//    }
 }
 
 #pragma mark - Selectors
