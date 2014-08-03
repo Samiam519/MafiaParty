@@ -8,6 +8,15 @@
 
 #import "Gameplay.h"
 
-@implementation Gameplay
+
+@implementation Gameplay {
+    CCNode *_loader;
+}
+
+-(void) didLoadFromCCB {
+    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+    [_loader addChild:game];
+   
+}
 
 @end

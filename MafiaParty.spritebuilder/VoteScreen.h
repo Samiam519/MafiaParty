@@ -8,6 +8,6 @@
 
 #import "CCNode.h"
 
-@interface Voting : CCNode
+@interface VoteScreen : CCNode
 
 @end
