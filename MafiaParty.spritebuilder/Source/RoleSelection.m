@@ -32,7 +32,7 @@
 -(void)didLoadFromCCB
 {
     player = [[Player alloc]init];
-    player.hasSelected = false;
+    //player.hasSelected = false;
     player.isDead = false;
     player.isSaved = false;
     

@@ -87,4 +87,9 @@ static NSCache *profilePictureCache;
     [[CCDirector sharedDirector] replaceScene:lobby];
 }
 
+-(void)results{
+    CCScene *results = (CCScene *)[CCBReader load:@"Results"];
+    [[CCDirector sharedDirector] replaceScene:results];
+}
+
 @end
