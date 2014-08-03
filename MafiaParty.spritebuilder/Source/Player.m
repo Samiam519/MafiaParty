@@ -9,8 +9,11 @@
 #import "Player.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @implementation Player
 =======
+=======
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 @implementation Player{
 //    NSString *name;
     NSString *typeOfDeath;
@@ -23,7 +26,7 @@
 }
 
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{
-    _name = myName;
+    _FBname = myName;
     _icon = myPicture;
 }
 
@@ -41,6 +44,9 @@
 {
     _isSaved = true;
 }
+<<<<<<< HEAD
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 
 @end

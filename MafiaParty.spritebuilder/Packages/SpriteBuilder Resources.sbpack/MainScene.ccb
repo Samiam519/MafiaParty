@@ -11,10 +11,14 @@
 	</dict>
 	<key>UUID</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<integer>8</integer>
 =======
 	<integer>9</integer>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+	<integer>9</integer>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -222,8 +226,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.173669695854187</real>
-							<real>0.94694989919662476</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -794,15 +798,20 @@
 				<integer>7</integer>
 				<key>baseClass</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<string>CCButton</string>
 =======
 				<string>CCSprite</string>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+				<string>CCSprite</string>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<string>CCButton</string>
 				<key>memberVarAssignmentName</key>
@@ -812,6 +821,11 @@
 				<key>memberVarAssignmentName</key>
 				<string>_IMAGE</string>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string>_IMAGE</string>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -832,12 +846,17 @@
 						<key>value</key>
 						<array>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							<real>160</real>
 							<real>50.000015258789062</real>
 =======
 							<real>60.730209350585938</real>
 							<real>66.324081420898438</real>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+							<real>60.730209350585938</real>
+							<real>66.324081420898438</real>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -869,6 +888,7 @@
 					</dict>
 					<dict>
 						<key>name</key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 						<string>block</string>
 						<key>type</key>
@@ -930,11 +950,15 @@
 =======
 						<string>spriteFrame</string>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+						<string>spriteFrame</string>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						<key>type</key>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
 							<string></string>
+<<<<<<< HEAD
 <<<<<<< HEAD
 							<string>ccbResources/ccbButtonNormal.png</string>
 						</array>
@@ -951,15 +975,22 @@
 =======
 							<string></string>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+							<string></string>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
 						<string>labelColor|Highlighted</string>
 =======
 						<string>color</string>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+						<string>color</string>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						<key>type</key>
 						<string>Color3</string>
 						<key>value</key>
@@ -970,6 +1001,7 @@
 							<real>1</real>
 						</array>
 					</dict>
+<<<<<<< HEAD
 <<<<<<< HEAD
 					<dict>
 						<key>name</key>
@@ -1147,6 +1179,9 @@
 =======
 				</array>
 >>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
+=======
+				</array>
+>>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 			</dict>
 		</array>
 		<key>customClass</key>
