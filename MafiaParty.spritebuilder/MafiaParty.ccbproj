@@ -29,7 +29,7 @@
 	<key>flattenPaths</key>
 	<false/>
 	<key>needRepublish</key>
-	<true/>
+	<false/>
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishAudioQuality_android</key>
@@ -84,8 +84,6 @@
 		<dict/>
 		<key>art</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
@@ -173,8 +171,11 @@
 		</dict>
 	</dict>
 	<key>versionStr</key>
-	<string>Version: 1.1.0
-GitHub: d058712eaf
+	<string>{
+"version": 0.9 , 
+"sku": "pro" ,
+"github" : "570c4ca236"
+}
 </string>
 </dict>
 </plist>
