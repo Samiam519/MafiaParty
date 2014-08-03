@@ -4905,7 +4905,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Placeholder Role</string>
+							<string>Unlock all Roles</string>
 							<false/>
 						</array>
 					</dict>
@@ -5041,6 +5041,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
