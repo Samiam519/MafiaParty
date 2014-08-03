@@ -18,12 +18,12 @@
     CCLabelTTF *_roleLabel;
     CCLabelTTF *_RoleTaskLabel;
     
-    UITextField *_noun1TextField;
-    UITextField *_noun2TextField;
-    UITextField *_verb1TextField;
-    UITextField *_verb2TextField;
-    UITextField *_adjective1TextField;
-    UITextField *_adjective2TextField;
+    CCTextField *_noun1TextField;
+    CCTextField *_noun2TextField;
+    CCTextField *_verb1TextField;
+    CCTextField *_verb2TextField;
+    CCTextField *_adjective1TextField;
+    CCTextField *_adjective2TextField;
 }
 
 -(void)mafiaChat{
