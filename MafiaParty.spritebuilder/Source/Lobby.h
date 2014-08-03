@@ -10,4 +10,6 @@
 
 @interface Lobby : CCNode
 
+@property (strong, nonatomic) NSMutableArray *allPlayers;
+
 @end

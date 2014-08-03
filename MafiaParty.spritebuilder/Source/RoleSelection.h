@@ -13,4 +13,9 @@
 // Other players array
 @property (nonatomic, strong) NSMutableArray *otherPlayers;
 
+// Arrays
+@property (nonatomic, strong) NSMutableArray *nounArray;
+@property (nonatomic, strong) NSMutableArray *verbArray;
+@property (nonatomic, strong) NSMutableArray *adjectiveArray;
+
 @end

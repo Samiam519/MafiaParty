@@ -347,6 +347,62 @@
 			path = MafiaParty;
 			sourceTree = "<group>";
 		};
+		706B9F66198E5D8300B9A0D1 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				706B9F64198E487900B9A0D1 /* stories.txt */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		706B9F67198E5D8F00B9A0D1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				708BC2EA198D89710066F9DE /* RoleSelection.h */,
+				708BC2EB198D89710066F9DE /* RoleSelection.m */,
+				70C78AFE198DDCB5000B04AF /* Results.h */,
+				70C78AFF198DDCB5000B04AF /* Results.m */,
+				70C78B01198DDD44000B04AF /* VoteScreen.h */,
+				70C78B02198DDD44000B04AF /* VoteScreen.m */,
+				B7378992180767190076A88C /* MainScene.h */,
+				B7378993180767190076A88C /* MainScene.m */,
+				70C78AF5198DD951000B04AF /* Lobby.h */,
+				70C78AF6198DD951000B04AF /* Lobby.m */,
+				70C78AF9198DDAC7000B04AF /* Store.h */,
+				70C78AFA198DDAC7000B04AF /* Store.m */,
+				708BC2E6198D87490066F9DE /* Gameplay.h */,
+				708BC2E7198D87490066F9DE /* Gameplay.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		706B9F68198E5DA900B9A0D1 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				F4510E77198DAF8B000E520F /* Player.h */,
+				F4510E78198DAF8B000E520F /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		706B9F69198E5DB400B9A0D1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B737893D1807617C0076A88C /* AppDelegate.h */,
+				B737893E1807617C0076A88C /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		706B9F6A198E5DBD00B9A0D1 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */,
+				5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,29 +414,13 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				706B9F64198E487900B9A0D1 /* stories.txt */,
-				5B12101719748413004C1E1D /* java */,
+				706B9F66198E5D8300B9A0D1 /* Content */,
+				706B9F69198E5DB400B9A0D1 /* Delegate */,
+				706B9F68198E5DA900B9A0D1 /* Player */,
 				F4510E9F198DE544000E520F /* Roles */,
-				B737893D1807617C0076A88C /* AppDelegate.h */,
-				B737893E1807617C0076A88C /* AppDelegate.m */,
-				5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */,
-				5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */,
-				B7378992180767190076A88C /* MainScene.h */,
-				B7378993180767190076A88C /* MainScene.m */,
-				70C78AF5198DD951000B04AF /* Lobby.h */,
-				70C78AF6198DD951000B04AF /* Lobby.m */,
-				70C78AF9198DDAC7000B04AF /* Store.h */,
-				70C78AFA198DDAC7000B04AF /* Store.m */,
-				708BC2E6198D87490066F9DE /* Gameplay.h */,
-				708BC2E7198D87490066F9DE /* Gameplay.m */,
-				F4510E77198DAF8B000E520F /* Player.h */,
-				F4510E78198DAF8B000E520F /* Player.m */,
-				708BC2EA198D89710066F9DE /* RoleSelection.h */,
-				708BC2EB198D89710066F9DE /* RoleSelection.m */,
-				70C78AFE198DDCB5000B04AF /* Results.h */,
-				70C78AFF198DDCB5000B04AF /* Results.m */,
-				70C78B01198DDD44000B04AF /* VoteScreen.h */,
-				70C78B02198DDD44000B04AF /* VoteScreen.m */,
+				706B9F67198E5D8F00B9A0D1 /* Scenes */,
+				5B12101719748413004C1E1D /* java */,
+				706B9F6A198E5DBD00B9A0D1 /* Activity */,
 			);
 			name = Source;
 			sourceTree = "<group>";
