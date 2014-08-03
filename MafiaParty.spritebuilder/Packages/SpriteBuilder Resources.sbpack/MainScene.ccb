@@ -10,7 +10,11 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
+<<<<<<< HEAD
 	<integer>8</integer>
+=======
+	<integer>9</integer>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -789,15 +793,25 @@
 				<key>UUID</key>
 				<integer>7</integer>
 				<key>baseClass</key>
+<<<<<<< HEAD
 				<string>CCButton</string>
+=======
+				<string>CCSprite</string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
+<<<<<<< HEAD
 				<string>CCButton</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
+=======
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string>_IMAGE</string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -817,8 +831,13 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>160</real>
 							<real>50.000015258789062</real>
+=======
+							<real>60.730209350585938</real>
+							<real>66.324081420898438</real>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -850,6 +869,7 @@
 					</dict>
 					<dict>
 						<key>name</key>
+<<<<<<< HEAD
 						<string>block</string>
 						<key>type</key>
 						<string>Block</string>
@@ -907,11 +927,15 @@
 					<dict>
 						<key>name</key>
 						<string>backgroundSpriteFrame|Normal</string>
+=======
+						<string>spriteFrame</string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 						<key>type</key>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
 							<string></string>
+<<<<<<< HEAD
 							<string>ccbResources/ccbButtonNormal.png</string>
 						</array>
 					</dict>
@@ -924,11 +948,18 @@
 						<array>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
+=======
+							<string></string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
+<<<<<<< HEAD
 						<string>labelColor|Highlighted</string>
+=======
+						<string>color</string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 						<key>type</key>
 						<string>Color3</string>
 						<key>value</key>
@@ -939,6 +970,7 @@
 							<real>1</real>
 						</array>
 					</dict>
+<<<<<<< HEAD
 					<dict>
 						<key>name</key>
 						<string>backgroundSpriteFrame|Disabled</string>
@@ -1112,6 +1144,9 @@
 				</array>
 				<key>selected</key>
 				<true/>
+=======
+				</array>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 			</dict>
 		</array>
 		<key>customClass</key>
