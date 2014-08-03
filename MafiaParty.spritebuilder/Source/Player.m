@@ -16,6 +16,7 @@
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
     
+    
     // CCSprite *icon;
     Player *selectedPlayer;
 }
@@ -28,22 +29,22 @@
     // If intialized,
     if (self)
         _alreadyPicked = FALSE;
-    if ([_role isEqualToString:@"mafia"]) {
+    if ([_role isEqualToString:@"Mafia"]) {
         _canKill = TRUE;
         _canSave = FALSE;
         _canSuspect = FALSE;
     }
-    if ([_role isEqualToString:@"doctor"]) {
+    if ([_role isEqualToString:@"Doctor"]) {
         _canKill = FALSE;
         _canSave = TRUE;
         _canSuspect = FALSE;
     }
-    if ([_role isEqualToString:@"police"]) {
+    if ([_role isEqualToString:@"Police"]) {
         _canKill = FALSE;
         _canSave = FALSE;
         _canSuspect = TRUE;
     }
-    if ([_role isEqualToString:@"citizen"]) {
+    if ([_role isEqualToString:@"Citizen"]) {
         _canKill = FALSE;
         _canSave = FALSE;
         _canSuspect = FALSE;
@@ -53,7 +54,8 @@
 
 -(void)didLoadFromCCB
 {
-    _role = @"citizen";
+    _role = @"Citizen";
+    _numVotes = 0;
 }
 
 - (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture
@@ -67,19 +69,19 @@
 {
     //Add code for getting strings
     
-    if ([_role isEqualToString:@"mafia"]) {
+    if ([_role isEqualToString:@"Mafia"]) {
         [self setDead:actionWithPlayer];
         // Kill player
     }
-    else if ([_role isEqualToString:@"doctor"]) {
+    else if ([_role isEqualToString:@"Doctor"]) {
         // Save player
         [self savePlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"police"]) {
+    else if ([_role isEqualToString:@"Police"]) {
         // Suspect player
         [self suspectPlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"citizen"]) {
+    else if ([_role isEqualToString:@"Citizen"]) {
         
     }
     _turnEnded = TRUE;
@@ -100,13 +102,19 @@
 - (void)suspectPlayer: (Player*)player
 {
     //Suspect
-    if ([player.role isEqualToString:@"mafia"]) {
+    if ([player.role isEqualToString:@"Mafia"]) {
         CCLOG(@"Player is mafia!");
     }
     else
     {
         CCLOG(@"Player is innocent");
     }
+}
+
+-(void)voteForPlayer:(Player *)chosenPlayer
+{
+    chosenPlayer.numVotes++;
+    _hasVoted = true;
 }
 
 @end

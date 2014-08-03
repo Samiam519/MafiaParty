@@ -65,40 +65,40 @@
     return self;
 }
 
-- (void)assignRoles:(NSMutableArray*)players
-{
-    playersLeftToAssign = (int)players.count;
-    if (players.count >= 11) {
-        [self selectPlayerRole:@"mafia" withValue:3];
-        playersLeftToAssign-= 3;
-    }
-    else if (players.count >= 7) {
-        [self selectPlayerRole:@"mafia" withValue:2];
-        playersLeftToAssign-= 2;
-    }
-    else if (players.count >= 4) {
-        [self selectPlayerRole:@"mafia" withValue:1];
-        playersLeftToAssign-= 1;
-    }
-    [self selectPlayerRole:@"doctor" withValue:1];
-    [self selectPlayerRole:@"police" withValue:1];
-    playersLeftToAssign -= 2;
-    [self selectPlayerRole:@"citizen" withValue:playersLeftToAssign];
-    
-}
-
-- (void)selectPlayerRole: (NSString*)role withValue:(int)repeatValue
-{
-    for (int i = 0; i < repeatValue; i++) {
-        int selected = arc4random() % _playerArray.count;
-        if (!((Player *)_playerArray[selected]).alreadyPicked) {
-            ((Player *)_playerArray[selected]).role = role;
-            ((Player *)_playerArray[selected]).alreadyPicked;
-        }else if (((Player *)_playerArray[selected]).alreadyPicked){
-            [self selectPlayerRole:role withValue:repeatValue];
-        }
-    }
-}
+//- (void)assignRoles:(NSMutableArray*)players
+//{
+//    playersLeftToAssign = (int)players.count;
+//    if (players.count >= 11) {
+//        [self selectPlayerRole:@"Mafia" withValue:3];
+//        playersLeftToAssign-= 3;
+//    }
+//    else if (players.count >= 7) {
+//        [self selectPlayerRole:@"Mafia" withValue:2];
+//        playersLeftToAssign-= 2;
+//    }
+//    else if (players.count >= 4) {
+//        [self selectPlayerRole:@"Mafia" withValue:1];
+//        playersLeftToAssign-= 1;
+//    }
+//    [self selectPlayerRole:@"Doctor" withValue:1];
+//    [self selectPlayerRole:@"Police" withValue:1];
+//    playersLeftToAssign -= 2;
+//    [self selectPlayerRole:@"Citizen" withValue:playersLeftToAssign];
+//    
+//}
+//
+//- (void)selectPlayerRole: (NSString*)role withValue:(int)repeatValue
+//{
+//    for (int i = 0; i < repeatValue; i++) {
+//        int selected = arc4random() % _playerArray.count;
+//        if (!((Player *)_playerArray[selected]).alreadyPicked) {
+//            ((Player *)_playerArray[selected]).role = role;
+//            ((Player *)_playerArray[selected]).alreadyPicked;
+//        }else if (((Player *)_playerArray[selected]).alreadyPicked){
+//            [self selectPlayerRole:role withValue:repeatValue];
+//        }
+//    }
+//}
 
 -(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {

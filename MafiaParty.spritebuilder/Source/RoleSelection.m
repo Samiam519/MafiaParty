@@ -148,14 +148,14 @@
     [self getVerb];
     
     // Perform player's night action
-    if ([player.role isEqualToString:@"mafia"]) {
+    if ([player.role isEqualToString:@"Mafia"]) {
         [self setDead:selected];
     }
-    else if ([player.role isEqualToString:@"doctor"])
+    else if ([player.role isEqualToString:@"Doctor"])
     {
         [self savePlayer:selected];
     }
-    else if ([player.role isEqualToString:@"police"])
+    else if ([player.role isEqualToString:@"Police"])
     {
         [self suspectPlayer:selected];
     }
@@ -178,7 +178,7 @@
 
 -(void)suspectPlayer: (Player *)curPlayer
 {
-    if ([curPlayer.role isEqualToString:@"mafia"])
+    if ([curPlayer.role isEqualToString:@"Mafia"])
     {
         CCLOG(@"%@ is mafia!", curPlayer.FBname);
     }
@@ -197,21 +197,21 @@
 {
     playersLeftToAssign = (int)players.count;
     if (players.count >= 11) {
-        [self selectPlayerRole:@"mafia" withValue:3];
+        [self selectPlayerRole:@"Mafia" withValue:3];
         playersLeftToAssign -= 3;
     }
     else if (players.count >= 7) {
-        [self selectPlayerRole:@"mafia" withValue:2];
+        [self selectPlayerRole:@"Mafia" withValue:2];
         playersLeftToAssign -= 2;
     }
     else if (players.count >= 4) {
-        [self selectPlayerRole:@"mafia" withValue:1];
+        [self selectPlayerRole:@"Mafia" withValue:1];
         playersLeftToAssign -= 1;
     }
-    [self selectPlayerRole:@"doctor" withValue:1];
-    [self selectPlayerRole:@"police" withValue:1];
+    [self selectPlayerRole:@"Doctor" withValue:1];
+    [self selectPlayerRole:@"Police" withValue:1];
     playersLeftToAssign -= 2;
-    [self selectPlayerRole:@"citizen" withValue:playersLeftToAssign];
+    [self selectPlayerRole:@"Citizen" withValue:playersLeftToAssign];
     
 }
 
@@ -251,7 +251,7 @@
             continue;
         }
         Player *curPlayer = players[randNum];
-        curPlayer.role = @"mafia";
+        curPlayer.role = @"Mafia";
         [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
         i++;
     }
@@ -264,7 +264,7 @@
             continue;
         }
         Player *curPlayer = players[randNum];
-        curPlayer.role = @"doctor";
+        curPlayer.role = @"Doctor";
         [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
         i++;
     }
@@ -276,7 +276,7 @@
             continue;
         }
         Player *curPlayer = players[randNum];
-        curPlayer.role = @"police";
+        curPlayer.role = @"Police";
         [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
         i++;
     }
@@ -292,6 +292,7 @@
             if (touchActivated)
             {
                 CCLOG(@"You touched %@", curPlayer.FBname);
+                //[myself performNightAction: curPlayer];
             }
         }
     }
@@ -305,12 +306,14 @@
     }
     _nextButton.enabled = true;
     _nextLabel.string = @"The next morning...";
+    _roleLabel.string = @"";
+    _RoleTaskLabel.string = @"";
 }
 
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    // On touch began
+    //On touch began
     touchActivated = true;
     touchLocation = [touch locationInWorld];
     CCLOG(@"TouchLocation = (%f, %f)", touchLocation.x, touchLocation.y);
