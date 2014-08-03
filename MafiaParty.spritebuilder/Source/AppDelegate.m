@@ -27,10 +27,13 @@
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 
-@implementation AppController
+@implementation AppController{
+    NSString *theString;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(icallthis:) name:@"THE ID" object:nil];
     // Configure Cocos2d with the options set in SpriteBuilder
     NSString* configPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Published-iOS"]; // TODO: add support for Published-Android support
     configPath = [configPath stringByAppendingPathComponent:@"configCocos2d.plist"];
@@ -65,6 +68,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
+    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",theString]];
+    [ref removeValue];
     [super applicationDidEnterBackground:application];
     [[CCDirector sharedDirector] stopAnimation];
 }
@@ -90,6 +95,21 @@
 - (CCScene*) startScene
 {
     return [CCBReader loadAsScene:@"MainScene"];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    /*
+     Called when the application is about to terminate.
+     See also applicationDidEnterBackground:.
+     */
+    
+//    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",(NSString*)_theID]];
+//    [ref removeAllObservers];
+}
+
+-(void)icallthis:(NSNotification*)theNotification{
+    theString = [theNotification object];
+    NSLog(@"%@",theString);
 }
 
 @end

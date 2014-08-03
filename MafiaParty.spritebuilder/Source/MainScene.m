@@ -10,6 +10,7 @@
 #import "Player.h"
 
 
+
 @implementation MainScene{
     Firebase *_myRootRef;
     FirebaseSimpleLogin *_authClient;
@@ -18,8 +19,9 @@
     CCSprite *_testSprite;
 }
 
+
 -(void)didLoadFromCCB{
-    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com"];
     _authClient = [[FirebaseSimpleLogin alloc] initWithRef:_myRootRef];
 }
 
@@ -79,14 +81,19 @@
 //                                 NSLog(@"%@", error.description);
 //                             }];
                              
-                             Firebase *addingUserRef = [_myRootRef childByAutoId];
+                             // New Firebase Reference for a new /sites
+                             Firebase *addRef = [[Firebase alloc]initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+                             // Reference for adding Child( /sites ) using autoID
+                             Firebase *addingUserRef = [addRef childByAutoId];
                              
+                             // Data has to be NSDick
                              NSDictionary *sentData = @{@"Name": _tempName,
                                                      @"Picture URL":_tempImagez};
-                             
+                             // Set Value
                              [addingUserRef setValue:sentData];
                              
-                             _me.weirdId = addingUserRef.name;
+                             NSString* addUserRefID = addingUserRef.name;
+                             [[NSNotificationCenter defaultCenter] postNotificationName:@"THE ID" object:addUserRefID];
                              
                          }
                      }];
