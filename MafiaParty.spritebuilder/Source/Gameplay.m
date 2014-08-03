@@ -8,24 +8,32 @@
 
 #import "Gameplay.h"
 
-
-@implementation Gameplay {
+@implementation Gameplay
+{
+    // Loader
     CCNode *_loader;
-
 }
--(id)init{
+
+- (id)init
+{
+    // Initialize
     self = [super init];
-    if (self) {
+    
+    // If intialized,
+    if (self)
+        // Init other players array
         _otherPlayers = [NSMutableArray array];
-    }
     return self;
 }
 
--(void) didLoadFromCCB {
+- (void)didLoadFromCCB
+{
+    // Enable touches
     self.userInteractionEnabled = FALSE;
+    
+    // Load Role Selection scene
     CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
     [_loader addChild:game];
-   
 }
 
 @end

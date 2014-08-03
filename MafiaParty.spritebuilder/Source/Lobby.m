@@ -8,23 +8,31 @@
 
 #import "Lobby.h"
 
-@implementation Lobby{
+@implementation Lobby
+{
+    // Labels
     CCLabelTTF *_playersReadyLabel;
     CCLabelTTF *_mafiaPlayersLabel;
 }
 
--(void)unlockRoles{
-    CCScene *store = [CCBReader loadAsScene:@"Store"];
+- (void)unlockRoles
+{
+    // Load the Store
+    CCScene *store = (CCScene *)[CCBReader loadAsScene:@"Store"];
     [[CCDirector sharedDirector] pushScene:store];
 }
 
--(void)play{
-    CCScene *roleScreen = [CCBReader loadAsScene:@"RoleSelection"];
+- (void)play
+{
+    // Load Role Selection
+    CCScene *roleScreen = (CCScene *)[CCBReader loadAsScene:@"RoleSelection"];
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }
 
--(void)ghettoPlay{
-    CCScene *roleScreen = [CCBReader loadAsScene:@"Gameplay"];
+- (void)ghettoPlay
+{
+    // GHETTOOOOOOOOOOO
+    CCScene *roleScreen = (CCScene *)[CCBReader loadAsScene:@"Gameplay"];
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }
 

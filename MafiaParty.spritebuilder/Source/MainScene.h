@@ -12,6 +12,6 @@
 
 @interface MainScene : CCNode
 
-@property Player* me;
+@property Player *me;
 
 @end

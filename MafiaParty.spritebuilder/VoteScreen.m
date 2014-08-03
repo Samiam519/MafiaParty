@@ -8,12 +8,16 @@
 
 #import "VoteScreen.h"
 
-@implementation VoteScreen{
+@implementation VoteScreen
+{
+    // Player node
     CCNode *_playerNode;
 }
 
--(void)vote{
-    CCScene *results = [CCBReader loadAsScene:@"Results"];
+- (void)vote
+{
+    // Go to Results Scene
+    CCScene *results = (CCScene *)[CCBReader loadAsScene:@"Results"];
     [[CCDirector sharedDirector] replaceScene:results];
 }
 

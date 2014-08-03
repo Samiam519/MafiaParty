@@ -8,34 +8,39 @@
 
 #import "Player.h"
 
-@implementation Player{
-//    NSString *name;
+@implementation Player
+{
+    // NSString *name;
     NSString *typeOfDeath;
     NSMutableArray *lynchStrings;
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
-//    CCSprite *icon;
+    
+    // CCSprite *icon;
     Player *selectedPlayer;
-
 }
 
--(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{
+- (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture
+{
+    // Set facebook name and picture for current user
     _FBname = myName;
     _icon = myPicture;
 }
 
--(void)performNightAction
+- (void)performNightAction
 {
     //Add code for getting strings
 }
 
--(void)setDead
+- (void)setDead
 {
+    // Die
     _isDead = true;
 }
 
--(void)savePlayer
+- (void)savePlayer
 {
+    // Save
     _isSaved = true;
 }
 

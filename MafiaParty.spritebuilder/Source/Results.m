@@ -25,7 +25,7 @@
     NSString *_allContent;
 }
 
--(void)didLoadFromCCB
+- (void)didLoadFromCCB
 {
     // Initialize arrays
     _eachLine = [[NSArray alloc] init];
@@ -40,11 +40,13 @@
     _storyLabel.string = _eachLine[randomIndex];
 }
 
--(void)next{
-    //if mafia caught -> play again goes to lobby
+- (void)next
+{
+    // If mafia caught -> play again goes to lobby
     CCScene *lobby = [CCBReader loadAsScene:@"Lobby"];
     [[CCDirector sharedDirector] replaceScene:lobby];
-    //if mafia not caught -> role selection
+    
+    // If mafia not caught -> role selection
     CCScene *roleScreen = [CCBReader loadAsScene:@"RoleSelection"];
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }

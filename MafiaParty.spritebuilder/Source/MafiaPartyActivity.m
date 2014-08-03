@@ -35,9 +35,8 @@
 - (BOOL)onKeyUp:(int32_t)keyCode keyEvent:(AndroidKeyEvent *)event
 {
     if (keyCode == AndroidKeyEventKeycodeBack)
-    {
         [self finish];
-    }
+
     return NO;
 }
 
