@@ -49,7 +49,7 @@
 		97CA5F58198DB604008AD380 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F57198DB604008AD380 /* SystemConfiguration.framework */; };
 		97CA5F5A198DB629008AD380 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F59198DB629008AD380 /* Firebase.framework */; };
 		97CA5F5C198DB659008AD380 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5B198DB659008AD380 /* FirebaseSimpleLogin.framework */; };
-		97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5D198DB675008AD380 /* Accounts.framework */; };
+		97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5D198DB675008AD380 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		97CA5F60198DB67C008AD380 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5F198DB67C008AD380 /* Social.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -266,8 +266,8 @@
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
 				97CA5F4D198DB556008AD380 /* FacebookSDK.framework in Frameworks */,
-				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
+				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
@@ -624,7 +624,7 @@
 		};
 		5B121003197481CE004C1E1D /* cocos2dJava.jar */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.jar;
+			fileType = compiled.java.jar;
 			path = cocos2dJava.jar;
 			remoteRef = 5B121002197481CE004C1E1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;

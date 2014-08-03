@@ -25,8 +25,6 @@
     CCTextField *_nounTextField;
     CCTextField *_verbTextField;
     CCTextField *_adjectiveTextField;
-    
-    CCNodeGradient *_backgroundGradient; //change color based on role
 }
 
 -(void)didLoadFromCCB

@@ -9,14 +9,11 @@
 #import "Player.h"
 
 @implementation Player{
-//    NSString *name;
     NSString *typeOfDeath;
     NSMutableArray *lynchStrings;
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
-//    CCSprite *icon;
     Player *selectedPlayer;
-
 }
 
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{

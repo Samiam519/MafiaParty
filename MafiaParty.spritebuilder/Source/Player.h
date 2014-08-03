@@ -14,7 +14,9 @@
 @property (nonatomic,assign)  BOOL isSaved;
 @property (nonatomic,strong)  CCSprite *icon;
 @property (nonatomic,strong)  NSString *FBname;
-
+@property (nonatomic,assign) BOOL hasSelected;
+@property (nonatomic,assign) BOOL isHost;
+@property NSString* weirdId;
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
 
 -(void)performNightAction;

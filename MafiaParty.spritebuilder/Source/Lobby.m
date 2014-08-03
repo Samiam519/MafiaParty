@@ -11,6 +11,8 @@
 @implementation Lobby{
     CCLabelTTF *_playersReadyLabel;
     CCLabelTTF *_mafiaPlayersLabel;
+    CCNode *_playersNode;
+    
 }
 
 -(void)unlockRoles{
