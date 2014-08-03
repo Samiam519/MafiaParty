@@ -174,6 +174,7 @@
 		70C78B02198DDD44000B04AF /* VoteScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteScreen.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* MafiaPartyAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaPartyAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		978D8556198E7F1600F25875 /* gameplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameplayDelegate.h; sourceTree = "<group>"; };
 		97CA5F4C198DB556008AD380 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		97CA5F4F198DB5A6008AD380 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		97CA5F51198DB5AF008AD380 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -390,6 +391,7 @@
 				70C78AFF198DDCB5000B04AF /* Results.m */,
 				70C78B01198DDD44000B04AF /* VoteScreen.h */,
 				70C78B02198DDD44000B04AF /* VoteScreen.m */,
+				978D8556198E7F1600F25875 /* gameplayDelegate.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";

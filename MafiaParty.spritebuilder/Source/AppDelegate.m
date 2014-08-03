@@ -110,7 +110,7 @@
 
 -(void)icallthis:(NSNotification*)theNotification{
     theString = [theNotification object];
-    NSLog(@"%@",theString);
+//    NSLog(@"%@",theString);
 }
 
 @end

@@ -21,7 +21,18 @@
 
 
 -(void)didLoadFromCCB{
-    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com"];
+    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+    
+//    [_myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+////        NSLog(@"%@", snapshot);
+//        for (FDataSnapshot* child in snapshot.children) {
+//                CCLOG(@"%@",child.name);
+//            }
+//    } withCancelBlock:^(NSError *error) {
+//        NSLog(@"%@", error.description);
+//    }];
+    
+    
     _authClient = [[FirebaseSimpleLogin alloc] initWithRef:_myRootRef];
 }
 
@@ -60,15 +71,13 @@
                              NSDictionary *newUser = user.thirdPartyUserData;
                              
                              NSString *_tempName = [newUser valueForKey:@"displayName"];
-                             CCLOG(@"NAME : %@",_tempName);
-                             NSURL *_tempImage = [NSURL URLWithString:[newUser valueForKey:@"picture"][@"data"][@"url"]] ;
+//                             CCLOG(@"NAME : %@",_tempName);
                              NSString *_tempImagez = [newUser valueForKey:@"picture"][@"data"][@"url"] ;
-                             CCLOG(@"URL : %@", _tempImage);
+//                             CCLOG(@"URL : %@", _tempImage);
                              NSURL *url = [NSURL URLWithString:_tempImagez];
                              NSData *data = [NSData dataWithContentsOfURL:url];
                              UIImage *image = [UIImage imageWithData:data];
 
-                             _testSprite.visible = false;
                              //convert UIImage to CCSprite
                              CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
                              _IMAGE.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
@@ -94,16 +103,15 @@
                              
                              NSString* addUserRefID = addingUserRef.name;
                              [[NSNotificationCenter defaultCenter] postNotificationName:@"THE ID" object:addUserRefID];
-                             
                          }
                      }];
     
     _authRef = [_myRootRef.root childByAppendingPath:@".info/authenticated"];
     
-    [_authRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot* snapshot) {
-        BOOL isAuthenticated = [snapshot.value boolValue];
-        CCLOG(isAuthenticated ? @"Yes" : @"No");
-    }];
+//    [_authRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot* snapshot) {
+//        BOOL isAuthenticated = [snapshot.value boolValue];
+////        CCLOG(isAuthenticated ? @"Yes" : @"No");
+//    }];
     
     
     [self toTheLobby];

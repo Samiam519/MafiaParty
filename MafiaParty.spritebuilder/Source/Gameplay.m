@@ -7,25 +7,35 @@
 //
 
 #import "Gameplay.h"
+#import "Player.h"
 
 
 @implementation Gameplay {
     CCNode *_loader;
-
+    Firebase *_myRootRef;
 }
--(id)init{
-    self = [super init];
-    if (self) {
-        _otherPlayers = [NSMutableArray array];
+
++(CCScene*)sendTheArray:(NSMutableArray*)theArray{
+    CCScene *newScene = [CCScene node];
+    [newScene addChild:[self gameplayWithArray:(NSMutableArray*)theArray]];
+    return newScene;
+}
+
++(id)gameplayWithArray:(NSMutableArray*)theArray{
+    return [[self alloc]initWithAnArray:(NSMutableArray*)theArray];
+}
+
+-(id)initWithAnArray:(NSMutableArray*)theArray{
+    _playerArray = [NSMutableArray array];
+    
+    if((self = (Gameplay *) [CCBReader load:@"Gameplay"])){
+        _playerArray = theArray;
     }
     return self;
 }
 
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = FALSE;
-    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
-    [_loader addChild:game];
-   
 }
 
 @end

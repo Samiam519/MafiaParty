@@ -7,7 +7,9 @@
 //
 
 #import "CCNode.h"
+#import "Player.h"
 
 @interface Lobby : CCNode
 
+@property (nonatomic, strong) NSMutableArray *otherPlayers;
 @end
