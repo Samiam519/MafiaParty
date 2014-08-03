@@ -431,7 +431,11 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<string>ROLE</string>
+=======
+							<string>Mafia</string>
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 							<false/>
 						</array>
 					</dict>
@@ -567,6 +571,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

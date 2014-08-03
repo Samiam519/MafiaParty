@@ -10,9 +10,16 @@
 
 @implementation Mafia
 
+<<<<<<< HEAD
 //-(void)performNightAction
 //{
 //    [selectedPlayer setDead];
 //}
+=======
+-(void)performNightAction
+{
+//    [selectedPlayer setDead];
+}
+>>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 
 @end
