@@ -13,4 +13,6 @@
 // Other Players Array
 @property (nonatomic, strong) NSMutableArray *playerArray;
 
++(CCScene*)sendTheArray:(NSMutableArray*)theArray;
+
 @end

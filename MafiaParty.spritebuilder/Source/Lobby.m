@@ -7,12 +7,68 @@
 //
 
 #import "Lobby.h"
+#import "Gameplay.h"
+#import "Player.h"
 
 @implementation Lobby
 {
     // Labels
     CCLabelTTF *_playersReadyLabel;
     CCLabelTTF *_mafiaPlayersLabel;
+    
+    Firebase *lobbyRef;
+}
+
+-(void)didLoadFromCCB{
+    lobbyRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+    _otherPlayers = [NSMutableArray array];
+    [lobbyRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
+        Player *newPlayer = [[Player alloc] init];
+        CCSprite *newImage;
+        newImage = [[CCSprite alloc]init];
+        NSString *_tempImagez = snapshot.value[@"Picture URL"];
+        NSURL *url = [NSURL URLWithString:_tempImagez];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        
+        //convert UIImage to CCSprite
+        CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
+        newImage.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
+        [newPlayer setMe:snapshot.value[@"Name"] andMyPicture:newImage];
+        [_otherPlayers addObject:newPlayer];
+        
+    } withCancelBlock:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
+    [lobbyRef observeEventType:FEventTypeChildRemoved withBlock:^(FDataSnapshot *snapshot) {
+        Player *newPlayer = [[Player alloc] init];
+        CCSprite *newImage;
+        newImage = [[CCSprite alloc]init];
+        NSString *_tempImagez = snapshot.value[@"Picture URL"];
+        NSURL *url = [NSURL URLWithString:_tempImagez];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        
+        //convert UIImage to CCSprite
+        CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
+        newImage.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
+        [newPlayer setMe:snapshot.value[@"Name"] andMyPicture:newImage];
+        [_otherPlayers addObject:newPlayer];
+        
+    } withCancelBlock:^(NSError *error) {
+        NSLog(@"%@", error.description);
+    }];
+    
+}
+
+-(void)update:(CCTime)delta{
+    
+    _playersReadyLabel.string = [NSString stringWithFormat:@"%d", (int)[_otherPlayers count]];
+}
+
+-(void)onEnter{
+    [super onEnter];
+    _playersReadyLabel.string = [NSString stringWithFormat:@"%d",(int)[_otherPlayers count]];
 }
 
 - (void)unlockRoles
@@ -29,7 +85,7 @@
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }
 
-- (void)ghettoPlay
+- (void)gameplay
 {
     // GHETTOOOOOOOOOOO
     CCScene *roleScreen = (CCScene *)[CCBReader loadAsScene:@"Gameplay"];

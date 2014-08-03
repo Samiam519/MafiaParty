@@ -18,6 +18,35 @@
     RoleSelection* roleSelectionControl;
     CGPoint touchLocation;
     Player *myself;
+    CCNode *_iconNode;
+    Firebase *_myRootRef;
+}
+
++(CCScene*)sendTheArray:(NSMutableArray*)theArray{
+    CCScene *newScene = [CCScene node];
+    [newScene addChild:[self gameplayWithArray:(NSMutableArray*)theArray]];
+    return newScene;
+}
+
++(id)gameplayWithArray:(NSMutableArray*)theArray{
+    return [[self alloc]initWithAnArray:(NSMutableArray*)theArray];
+}
+
+-(id)initWithAnArray:(NSMutableArray*)theArray{
+    _playerArray = [NSMutableArray array];
+    
+    if((self = (Gameplay *) [CCBReader load:@"Gameplay"])){
+        _playerArray = theArray;
+    }
+    return self;
+}
+
+-(void) didLoadFromCCB {
+    self.userInteractionEnabled = FALSE;
+    
+    // Load Role Selection scene
+    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+    [_loader addChild:game];
 }
 
 - (id)init
@@ -73,25 +102,17 @@
     touchLocation = [touch locationInWorld];
 }
 
-- (void)didLoadFromCCB
-{
-    // Enable touches
-    self.userInteractionEnabled = FALSE;
-    
-    // Load Role Selection scene
-    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
-    [_loader addChild:game];
-}
-
 - (void)update:(CCTime)delta
 {
-    for (CCSprite *icon in _iconNode.children)
-    {
-        if (CGRectContainsPoint(icon.boundingBox, touchLocation))
-        {
-            [myself performNightAction:[_playerArray indexOfObject:icon]];
-        }
-    }
+//    for (CCSprite *icon in _iconNode.children)
+//    {    // Load Role Selection scene
+//        CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+//        [_loader addChild:game];
+//        if (CGRectContainsPoint(icon.boundingBox, touchLocation))
+//        {
+//            [myself performNightAction:[_playerArray indexOfObject:icon]];
+//        }
+//    }
     
     for (Player* currentPlayer in _playerArray)
     {
