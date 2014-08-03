@@ -20,7 +20,7 @@
 }
 
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{
-    _name = myName;
+    _FBname = myName;
     _icon = myPicture;
 }
 

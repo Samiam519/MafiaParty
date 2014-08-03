@@ -13,7 +13,7 @@
 @property (nonatomic,assign)  BOOL isDead;
 @property (nonatomic,assign)  BOOL isSaved;
 @property (nonatomic,strong)  CCSprite *icon;
-@property (nonatomic,strong)  NSString *name;
+@property (nonatomic,strong)  NSString *FBname;
 
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
 

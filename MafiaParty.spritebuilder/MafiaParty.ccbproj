@@ -29,7 +29,7 @@
 	<key>flattenPaths</key>
 	<false/>
 	<key>needRepublish</key>
-	<false/>
+	<true/>
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishAudioQuality_android</key>
@@ -173,11 +173,8 @@
 		</dict>
 	</dict>
 	<key>versionStr</key>
-	<string>{
-"version": 0.9 , 
-"sku": "pro" ,
-"github" : "570c4ca236"
-}
+	<string>Version: 1.1.0
+GitHub: d058712eaf
 </string>
 </dict>
 </plist>

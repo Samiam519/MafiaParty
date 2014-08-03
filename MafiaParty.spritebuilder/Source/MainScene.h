@@ -8,6 +8,10 @@
 
 #import "CCNode.h"
 
+@class Player;
+
 @interface MainScene : CCNode
+
+@property Player* me;
 
 @end
