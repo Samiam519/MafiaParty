@@ -13,6 +13,7 @@
 		5B12102A197484DD004C1E1D /* MafiaPartyActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* MafiaPartyActivity.java */; };
 		5B121030197484FA004C1E1D /* MafiaPartyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
+		706B9F65198E487900B9A0D1 /* stories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 706B9F64198E487900B9A0D1 /* stories.txt */; };
 		708BC2E8198D87490066F9DE /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2E7198D87490066F9DE /* Gameplay.m */; };
 		708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2EB198D89710066F9DE /* RoleSelection.m */; };
 		70C78AED198DB936000B04AF /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C78AEC198DB936000B04AF /* Images-2.xcassets */; };
@@ -157,6 +158,7 @@
 		5B121033197485FE004C1E1D /* Android-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Android-Info.plist"; sourceTree = "<group>"; };
 		5B121034197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		706B9F64198E487900B9A0D1 /* stories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stories.txt; sourceTree = "<group>"; };
 		708BC2E6198D87490066F9DE /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		708BC2E7198D87490066F9DE /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		708BC2EA198D89710066F9DE /* RoleSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoleSelection.h; path = Source/RoleSelection.h; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				706B9F64198E487900B9A0D1 /* stories.txt */,
 				5B12101719748413004C1E1D /* java */,
 				F4510E9F198DE544000E520F /* Roles */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
@@ -672,6 +675,7 @@
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
+				706B9F65198E487900B9A0D1 /* stories.txt in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
