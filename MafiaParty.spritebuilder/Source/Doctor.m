@@ -10,16 +10,9 @@
 
 @implementation Doctor
 
-<<<<<<< HEAD
-//-(void)performNightAction
-//{
-//    [selectedPlayer savePlayer];
-//}
-=======
 -(void)performNightAction
 {
 //    [selectedPlayer savePlayer];
 }
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 
 @end

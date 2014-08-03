@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>27</integer>
+	<integer>25</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>CCNodeGradient</string>
 				<key>memberVarAssignmentName</key>
-				<string>_backgroundGradient</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -122,9 +122,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.50196081399917603</real>
-							<real>0.15414759516716003</real>
-							<real>0.16163788735866547</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -135,9 +135,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.50196081399917603</real>
-							<real>0.15294118225574493</real>
-							<real>0.16078431904315948</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -186,8 +186,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.31999999284744263</real>
-							<real>0.050000041723251343</real>
+							<real>0.25</real>
+							<real>0.05000000074505806</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -211,8 +211,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.1028857231140137</real>
-							<real>0.87557721138000488</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -224,7 +224,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>You are the</string>
+							<string>You are:</string>
 							<false/>
 						</array>
 					</dict>
@@ -393,7 +393,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.20000000298023224</real>
+							<real>0.30000001192092896</real>
 							<real>0.05000000074505806</real>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -418,8 +418,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.1461765766143799</real>
-							<real>0.85248482227325439</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -431,11 +431,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
-							<string>ROLE</string>
-=======
 							<string>Mafia</string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
 							<false/>
 						</array>
 					</dict>
@@ -644,7 +640,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tap to chat
+							<string>Click to chat
 your gang:</string>
 							<false/>
 						</array>
@@ -1148,8 +1144,8 @@ your gang:</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.49687498807907104</real>
-							<real>0.69823944568634033</real>
+							<real>0.5</real>
+							<real>0.69999998807907104</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1186,7 +1182,7 @@ your gang:</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Who do you want to..?</string>
+							<string>Who do you want to</string>
 							<false/>
 						</array>
 					</dict>
@@ -1393,7 +1389,7 @@ your gang:</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Fill this out, would you?</string>
+							<string>Write some words</string>
 							<false/>
 						</array>
 					</dict>
@@ -1540,9 +1536,9 @@ your gang:</string>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>noun</string>
+				<string>CCTextField</string>
 				<key>memberVarAssignmentName</key>
-				<string>_nounTextField</string>
+				<string>_noun1TextField</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1562,8 +1558,135 @@ your gang:</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
+							<real>0.05000000074505806</real>
 							<real>0.30000001192092896</real>
-							<real>0.29647892713546753</real>
+							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.63904488086700439</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>block</string>
+						<key>type</key>
+						<string>Block</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<integer>1</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>preferredSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>200</real>
+							<real>36</real>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>userInteractionEnabled</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>ccbResources/ccbTextField.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>padding</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>7</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<integer>17</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>8</integer>
+				<key>baseClass</key>
+				<string>CCTextField</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCTextField</string>
+				<key>memberVarAssignmentName</key>
+				<string>_noun2TextField</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.05000000074505806</real>
+							<real>0.23000000417232513</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1667,9 +1790,9 @@ your gang:</string>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>adj</string>
+				<string>CCTextField</string>
 				<key>memberVarAssignmentName</key>
-				<string>_adjectiveTextField</string>
+				<string>_adjective1TextField</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1689,8 +1812,8 @@ your gang:</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.30000001192092896</real>
-							<real>0.22866198420524597</real>
+							<real>0.05000000074505806</real>
+							<real>0.15999999642372131</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1786,7 +1909,7 @@ your gang:</string>
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>16</integer>
+				<integer>12</integer>
 				<key>baseClass</key>
 				<string>CCTextField</string>
 				<key>children</key>
@@ -1794,9 +1917,9 @@ your gang:</string>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>verb</string>
+				<string>CCTextField</string>
 				<key>memberVarAssignmentName</key>
-				<string>_verbTextField</string>
+				<string>_adjective2TextField</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -1816,8 +1939,262 @@ your gang:</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
+							<real>0.05000000074505806</real>
+							<real>0.15999999642372131</real>
+							<integer>3</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.63904488086700439</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>block</string>
+						<key>type</key>
+						<string>Block</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<integer>1</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>preferredSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>200</real>
+							<real>36</real>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>userInteractionEnabled</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>ccbResources/ccbTextField.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>padding</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>7</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<integer>17</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>14</integer>
+				<key>baseClass</key>
+				<string>CCTextField</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCTextField</string>
+				<key>memberVarAssignmentName</key>
+				<string>_verb2TextField</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.05000000074505806</real>
+							<real>0.23000000417232513</real>
+							<integer>3</integer>
+							<integer>2</integer>
+							<integer>2</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.63904488086700439</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>block</string>
+						<key>type</key>
+						<string>Block</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<integer>1</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>preferredSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>200</real>
+							<real>36</real>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>userInteractionEnabled</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>ccbResources/ccbTextField.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>padding</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>7</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<integer>17</integer>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>16</integer>
+				<key>baseClass</key>
+				<string>CCTextField</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCTextField</string>
+				<key>memberVarAssignmentName</key>
+				<string>_verb1TextField</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.05000000074505806</real>
 							<real>0.30000001192092896</real>
-							<real>0.15915496647357941</real>
 							<integer>3</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2022,7 +2399,7 @@ your gang:</string>
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.55950707197189331</real>
+							<real>0.60000002384185791</real>
 							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2602,7 +2979,7 @@ your gang:</string>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>RoleSelection</string>
+		<string>NightGameplay</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
