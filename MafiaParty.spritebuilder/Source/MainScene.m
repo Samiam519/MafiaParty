@@ -10,7 +10,6 @@
 #import "Player.h"
 
 
-static NSCache *profilePictureCache;
 
 @implementation MainScene{
     Firebase *_myRootRef;
@@ -20,26 +19,26 @@ static NSCache *profilePictureCache;
     CCSprite *_testSprite;
 }
 
+
 -(void)didLoadFromCCB{
-    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/"];
+    _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com"];
     _authClient = [[FirebaseSimpleLogin alloc] initWithRef:_myRootRef];
-    
-    
 }
 
 -(void)onEnter{
     [super onEnter];
-    [_authClient checkAuthStatusWithBlock:^(NSError* error, FAUser* user) {
-        if (error != nil) {
-            // an error occurred while attempting login
-            NSLog(@"%@", error);
-        } else if (user == nil) {
-            // No user is logged in
-        } else {
-            // user authenticated with Firebase
-            NSLog(@"%@", user);
-        }
-    }];
+    
+//    [_authClient checkAuthStatusWithBlock:^(NSError* error, FAUser* user) {
+//        if (error != nil) {
+//            // an error occurred while attempting login
+//            NSLog(@"%@", error);
+//        } else if (user == nil) {
+//            // No user is logged in
+//        } else {
+//            // user authenticated with Firebase
+//            NSLog(@"%@", user);
+//        }
+//    }];
 }
 -(void)startGame
 {
@@ -47,6 +46,7 @@ static NSCache *profilePictureCache;
 }
 
 -(void)logInWithFacebook{
+    
     [_authClient loginToFacebookAppWithId:@"750925491636225" permissions:@[@"email"]
                                 audience:ACFacebookAudienceOnlyMe
                      withCompletionBlock:^(NSError *error, FAUser *user) {
@@ -54,7 +54,9 @@ static NSCache *profilePictureCache;
                          if (error != nil) {
                              // There was an error logging in
                          } else {
+                             
                              // We have a logged in Facebook user
+                             
                              NSDictionary *newUser = user.thirdPartyUserData;
                              
                              NSString *_tempName = [newUser valueForKey:@"displayName"];
@@ -71,20 +73,50 @@ static NSCache *profilePictureCache;
                              CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
                              _IMAGE.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 100.f, 100.f) rotated:NO offset:ccp(0,0) originalSize:CGSizeMake(1.f, 1.f)];
                              [_me setMe:_tempName andMyPicture:_IMAGE];
+//                             Firebase* postsRef = [[Firebase alloc] initWithUrl: @"https://mafiagame.firebaseio.com/games/users/"];
+//                            
+//                             [postsRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+//                                 NSLog(@"%@", snapshot.value);
+//                             } withCancelBlock:^(NSError *error) {
+//                                 NSLog(@"%@", error.description);
+//                             }];
+                             
+                             // New Firebase Reference for a new /sites
+                             Firebase *addRef = [[Firebase alloc]initWithUrl:@"https://mafiagame.firebaseio.com/games"];
+                             // Reference for adding Child( /sites ) using autoID
+                             Firebase *addingUserRef = [addRef childByAutoId];
+                             
+                             // Data has to be NSDick
+                             NSDictionary *sentData = @{@"Name": _tempName,
+                                                     @"Picture URL":_tempImagez};
+                             // Set Value
+                             [addingUserRef setValue:sentData];
+                             
+                             NSString* addUserRefID = addingUserRef.name;
+                             [[NSNotificationCenter defaultCenter] postNotificationName:@"THE ID" object:addUserRefID];
                              
                          }
                      }];
     
     _authRef = [_myRootRef.root childByAppendingPath:@".info/authenticated"];
+    
     [_authRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot* snapshot) {
         BOOL isAuthenticated = [snapshot.value boolValue];
         CCLOG(isAuthenticated ? @"Yes" : @"No");
     }];
+    
+    
+    [self toTheLobby];
 }
 
 -(void) toTheLobby {
     CCScene *lobby = [CCBReader loadAsScene:@"Lobby"];
     [[CCDirector sharedDirector] replaceScene:lobby];
+}
+
+-(void)results{
+    CCScene *results = (CCScene *)[CCBReader load:@"Results"];
+    [[CCDirector sharedDirector] replaceScene:results];
 }
 
 @end

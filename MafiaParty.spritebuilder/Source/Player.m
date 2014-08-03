@@ -15,14 +15,11 @@
 =======
 >>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 @implementation Player{
-//    NSString *name;
     NSString *typeOfDeath;
     NSMutableArray *lynchStrings;
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
-//    CCSprite *icon;
     Player *selectedPlayer;
-
 }
 
 -(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture{

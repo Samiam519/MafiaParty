@@ -25,14 +25,12 @@
     CCTextField *_nounTextField;
     CCTextField *_verbTextField;
     CCTextField *_adjectiveTextField;
-    
-    CCNodeGradient *_backgroundGradient; //change color based on role
 }
 
 -(void)didLoadFromCCB
 {
     player = [[Player alloc]init];
-    player.hasSelected = false;
+    //player.hasSelected = false;
     player.isDead = false;
     player.isSaved = false;
     

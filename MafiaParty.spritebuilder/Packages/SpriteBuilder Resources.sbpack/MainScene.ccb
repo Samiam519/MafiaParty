@@ -10,15 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<integer>8</integer>
-=======
-	<integer>9</integer>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-	<integer>9</integer>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
+	<integer>10</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -797,35 +789,15 @@
 				<key>UUID</key>
 				<integer>7</integer>
 				<key>baseClass</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<string>CCButton</string>
-=======
 				<string>CCSprite</string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-				<string>CCSprite</string>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<string>CCButton</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-=======
 				<string>CCSprite</string>
 				<key>memberVarAssignmentName</key>
 				<string>_IMAGE</string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-				<string>CCSprite</string>
-				<key>memberVarAssignmentName</key>
-				<string>_IMAGE</string>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -845,18 +817,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
-<<<<<<< HEAD
-							<real>160</real>
-							<real>50.000015258789062</real>
-=======
 							<real>60.730209350585938</real>
 							<real>66.324081420898438</real>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-							<real>60.730209350585938</real>
-							<real>66.324081420898438</real>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -888,14 +850,101 @@
 					</dict>
 					<dict>
 						<key>name</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>9</integer>
+				<key>baseClass</key>
+				<string>CCButton</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCButton</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>158.55996704101562</real>
+							<real>52.159988403320312</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>block</string>
 						<key>type</key>
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>toTheLobby</string>
+							<string>results</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -940,26 +989,18 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Ratchet Lobby Button</string>
+							<string>Title</string>
 							<false/>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
 						<string>backgroundSpriteFrame|Normal</string>
-=======
-						<string>spriteFrame</string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-						<string>spriteFrame</string>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						<key>type</key>
 						<string>SpriteFrame</string>
 						<key>value</key>
 						<array>
 							<string></string>
-<<<<<<< HEAD
-<<<<<<< HEAD
 							<string>ccbResources/ccbButtonNormal.png</string>
 						</array>
 					</dict>
@@ -972,25 +1013,11 @@
 						<array>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
-=======
-							<string></string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-							<string></string>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 						<string>labelColor|Highlighted</string>
-=======
-						<string>color</string>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-						<string>color</string>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 						<key>type</key>
 						<string>Color3</string>
 						<key>value</key>
@@ -1001,8 +1028,6 @@
 							<real>1</real>
 						</array>
 					</dict>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<dict>
 						<key>name</key>
 						<string>backgroundSpriteFrame|Disabled</string>
@@ -1176,12 +1201,6 @@
 				</array>
 				<key>selected</key>
 				<true/>
-=======
-				</array>
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
-				</array>
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
 			</dict>
 		</array>
 		<key>customClass</key>

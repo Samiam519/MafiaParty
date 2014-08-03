@@ -13,6 +13,7 @@
 		5B12102A197484DD004C1E1D /* MafiaPartyActivity.java in Sources */ = {isa = PBXBuildFile; fileRef = 5B12101B19748413004C1E1D /* MafiaPartyActivity.java */; };
 		5B121030197484FA004C1E1D /* MafiaPartyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
+		706B9F65198E487900B9A0D1 /* stories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 706B9F64198E487900B9A0D1 /* stories.txt */; };
 		708BC2E8198D87490066F9DE /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2E7198D87490066F9DE /* Gameplay.m */; };
 		708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2EB198D89710066F9DE /* RoleSelection.m */; };
 		70C78AED198DB936000B04AF /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C78AEC198DB936000B04AF /* Images-2.xcassets */; };
@@ -49,7 +50,7 @@
 		97CA5F58198DB604008AD380 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F57198DB604008AD380 /* SystemConfiguration.framework */; };
 		97CA5F5A198DB629008AD380 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F59198DB629008AD380 /* Firebase.framework */; };
 		97CA5F5C198DB659008AD380 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5B198DB659008AD380 /* FirebaseSimpleLogin.framework */; };
-		97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5D198DB675008AD380 /* Accounts.framework */; };
+		97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5D198DB675008AD380 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		97CA5F60198DB67C008AD380 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5F198DB67C008AD380 /* Social.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -151,12 +152,13 @@
 		5B121013197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121015197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B12101B19748413004C1E1D /* MafiaPartyActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MafiaPartyActivity.java; sourceTree = "<group>"; };
-		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = archive.jar; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MafiaPartyActivity.h; path = Source/MafiaPartyActivity.h; sourceTree = "<group>"; };
 		5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MafiaPartyActivity.m; path = Source/MafiaPartyActivity.m; sourceTree = "<group>"; };
 		5B121033197485FE004C1E1D /* Android-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Android-Info.plist"; sourceTree = "<group>"; };
 		5B121034197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AndroidManifest.xml; sourceTree = "<group>"; };
+		706B9F64198E487900B9A0D1 /* stories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stories.txt; sourceTree = "<group>"; };
 		708BC2E6198D87490066F9DE /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		708BC2E7198D87490066F9DE /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		708BC2EA198D89710066F9DE /* RoleSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoleSelection.h; path = Source/RoleSelection.h; sourceTree = "<group>"; };
@@ -266,8 +268,8 @@
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
 				97CA5F4D198DB556008AD380 /* FacebookSDK.framework in Frameworks */,
-				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
+				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
@@ -365,6 +367,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				706B9F64198E487900B9A0D1 /* stories.txt */,
 				5B12101719748413004C1E1D /* java */,
 				F4510E9F198DE544000E520F /* Roles */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
@@ -624,7 +627,7 @@
 		};
 		5B121003197481CE004C1E1D /* cocos2dJava.jar */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.jar;
+			fileType = compiled.java.jar;
 			path = cocos2dJava.jar;
 			remoteRef = 5B121002197481CE004C1E1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -672,6 +675,7 @@
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
+				706B9F65198E487900B9A0D1 /* stories.txt in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,

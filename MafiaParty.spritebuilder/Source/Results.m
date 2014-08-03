@@ -8,9 +8,36 @@
 
 #import "Results.h"
 
-@implementation Results{
+@implementation Results
+{
+    // Labels
     CCLabelTTF *_storyLabel;
     CCLabelTTF *nextLabel;
+    
+    // Ints
+    int randomIndex;
+    
+    // Arrays
+    NSArray *_eachLine;
+    
+    // Strings
+    NSString *_path;
+    NSString *_allContent;
+}
+
+-(void)didLoadFromCCB
+{
+    // Initialize arrays
+    _eachLine = [[NSArray alloc] init];
+    
+    // Read in content from txt file
+    _path = [[NSBundle mainBundle] pathForResource:@"stories" ofType:@"txt"];
+    _allContent = [NSString stringWithContentsOfFile:_path encoding:NSUTF8StringEncoding error:NULL];
+    _eachLine = [_allContent componentsSeparatedByString:@"\n"];
+    
+    // Load Stories and shit
+    randomIndex = arc4random() % [_eachLine count];
+    _storyLabel.string = _eachLine[randomIndex];
 }
 
 -(void)next{

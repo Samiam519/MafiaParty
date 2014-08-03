@@ -10,4 +10,6 @@
 
 @interface Gameplay : CCScene
 
+@property (nonatomic, strong) NSMutableArray *otherPlayers;
+
 @end

@@ -11,6 +11,14 @@
 
 @implementation Gameplay {
     CCNode *_loader;
+
+}
+-(id)init{
+    self = [super init];
+    if (self) {
+        _otherPlayers = [NSMutableArray array];
+    }
+    return self;
 }
 
 -(void) didLoadFromCCB {
