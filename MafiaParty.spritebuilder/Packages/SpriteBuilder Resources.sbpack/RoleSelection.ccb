@@ -1722,7 +1722,7 @@
 						<key>value</key>
 						<array>
 							<real>0.30000001192092896</real>
-							<real>0.05000000074505806</real>
+							<real>0.070000000298023224</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1778,7 +1778,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
+							<real>35</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1929,7 +1929,7 @@
 						<key>value</key>
 						<array>
 							<real>0.23000000417232513</real>
-							<real>0.05000000074505806</real>
+							<real>0.070000000298023224</real>
 							<integer>2</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1985,7 +1985,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>45</real>
+							<real>35</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2102,6 +2102,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4052,8 +4054,6 @@ your gang:</string>
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

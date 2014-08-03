@@ -15,6 +15,9 @@
     // Labels
     CCLabelTTF *_playersReadyLabel;
     CCLabelTTF *_mafiaPlayersLabel;
+    CCLabelTTF *_playLabel;
+    
+    CCButton *_playButton;
     
     Firebase *lobbyRef;
 }
@@ -64,6 +67,27 @@
 -(void)update:(CCTime)delta{
     
     _playersReadyLabel.string = [NSString stringWithFormat:@"%d", (int)[_otherPlayers count]];
+    if (_otherPlayers.count < 7) {
+        _mafiaPlayersLabel.string = @"1";
+    }
+    else if (_otherPlayers.count < 11) {
+        _mafiaPlayersLabel.string = @"2";
+    }
+    else if (_otherPlayers.count > 10) {
+        _mafiaPlayersLabel.string = @"3";
+    }
+    
+    if ([_otherPlayers count] < 4)
+    {
+        _playLabel.string = @"Wait for more players";
+        _playButton.enabled = FALSE;
+    }
+    else if ([_otherPlayers count] >= 4)
+    {
+        _playLabel.string = @"PLAY";
+        _playButton.enabled = TRUE;
+    }
+        
 }
 
 -(void)onEnter{

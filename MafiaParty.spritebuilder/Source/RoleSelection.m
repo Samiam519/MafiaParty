@@ -23,6 +23,9 @@
     CCLabelTTF *_roleLabel;
     CCLabelTTF *_RoleTaskLabel;
     CCLabelTTF *_MafiaGangLabel;
+    CCLabelTTF *_nextLabel;
+    
+    CCButton *_nextButton;
     
     
     // Text Fields
@@ -62,12 +65,11 @@
     _nextLabel.string = @"Waiting for other players";
     _nextButton.enabled = FALSE;
     
-    int i = 0;
-    for (Player *player in _iconNode.children)
+    for (int n = 0; n < _iconNode.children.count; n++)
     {
-        player.icon = ((Player *)_playerArray[i]).icon;
-        i++;
+        ((Player *)_iconNode.children[n]).icon = ((Player *)_playerArray[n]).icon;
     }
+
 }
 
 - (void)mafiaChat
@@ -163,6 +165,19 @@
 -(void)beACitizen
 {
     
+}
+
+- (void)update:(CCTime)delta
+{
+    for (Player *currentPlayer in _playerArray)
+    {
+        if (!currentPlayer.turnEnded)
+        {
+            return;
+        }
+    }
+    _nextButton.enabled = true;
+    _nextLabel.string = @"The next morning...";
 }
 
 
