@@ -20,6 +20,37 @@
     Player *selectedPlayer;
 }
 
+- (id)init
+{
+    // Initialize
+    self = [super init];
+    
+    // If intialized,
+    if (self)
+        _alreadyPicked = FALSE;
+    if ([_role isEqualToString:@"mafia"]) {
+        _canKill = TRUE;
+        _canSave = FALSE;
+        _canSuspect = FALSE;
+    }
+    if ([_role isEqualToString:@"doctor"]) {
+        _canKill = FALSE;
+        _canSave = TRUE;
+        _canSuspect = FALSE;
+    }
+    if ([_role isEqualToString:@"police"]) {
+        _canKill = FALSE;
+        _canSave = FALSE;
+        _canSuspect = TRUE;
+    }
+    if ([_role isEqualToString:@"citizen"]) {
+        _canKill = FALSE;
+        _canSave = FALSE;
+        _canSuspect = FALSE;
+    }
+    return self;
+}
+
 - (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture
 {
     // Set facebook name and picture for current user
@@ -27,21 +58,50 @@
     _icon = myPicture;
 }
 
-- (void)performNightAction
+- (void)performNightAction: (Player*)actionWithPlayer
 {
     //Add code for getting strings
+    
+    if ([_role isEqualToString:@"mafia"]) {
+        [self setDead:actionWithPlayer];
+        // Kill player
+    }
+    else if ([_role isEqualToString:@"doctor"]) {
+        // Save player
+        [self savePlayer:actionWithPlayer];
+    }
+    else if ([_role isEqualToString:@"police"]) {
+        // Suspect player
+        [self suspectPlayer:actionWithPlayer];
+    }
+    else if ([_role isEqualToString:@"citizen"]) {
+        
+    }
+    _turnEnded = TRUE;
 }
 
-- (void)setDead
+- (void)setDead: (Player*)player
 {
     // Die
     _isDead = true;
 }
 
-- (void)savePlayer
+- (void)savePlayer: (Player*)player
 {
     // Save
     _isSaved = true;
+}
+
+- (void)suspectPlayer: (Player*)player
+{
+    //Suspect
+    if ([player.role isEqualToString:@"mafia"]) {
+        CCLOG(@"Player is mafia!");
+    }
+    else
+    {
+        CCLOG(@"Player is innocent");
+    }
 }
 
 @end

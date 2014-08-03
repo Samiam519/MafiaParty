@@ -80,9 +80,6 @@
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		F4510E79198DAF8B000E520F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = F4510E78198DAF8B000E520F /* Player.m */; };
-		F4510E80198DB137000E520F /* Mafia.m in Sources */ = {isa = PBXBuildFile; fileRef = F4510E7F198DB137000E520F /* Mafia.m */; };
-		F4510E83198DB25D000E520F /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = F4510E82198DB25D000E520F /* Doctor.m */; };
-		F4510E86198DB2B6000E520F /* Police.m in Sources */ = {isa = PBXBuildFile; fileRef = F4510E85198DB2B6000E520F /* Police.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,12 +216,6 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		F4510E77198DAF8B000E520F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
 		F4510E78198DAF8B000E520F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
-		F4510E7E198DB137000E520F /* Mafia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mafia.h; path = Source/Mafia.h; sourceTree = "<group>"; };
-		F4510E7F198DB137000E520F /* Mafia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mafia.m; path = Source/Mafia.m; sourceTree = "<group>"; };
-		F4510E81198DB25D000E520F /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Doctor.h; path = Source/Doctor.h; sourceTree = "<group>"; };
-		F4510E82198DB25D000E520F /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Doctor.m; path = Source/Doctor.m; sourceTree = "<group>"; };
-		F4510E84198DB2B6000E520F /* Police.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Police.h; path = Source/Police.h; sourceTree = "<group>"; };
-		F4510E85198DB2B6000E520F /* Police.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Police.m; path = Source/Police.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,20 +358,20 @@
 		706B9F67198E5D8F00B9A0D1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B7378992180767190076A88C /* MainScene.h */,
+				B7378993180767190076A88C /* MainScene.m */,
+				70C78AF5198DD951000B04AF /* Lobby.h */,
+				70C78AF6198DD951000B04AF /* Lobby.m */,
+				708BC2E6198D87490066F9DE /* Gameplay.h */,
+				708BC2E7198D87490066F9DE /* Gameplay.m */,
 				708BC2EA198D89710066F9DE /* RoleSelection.h */,
 				708BC2EB198D89710066F9DE /* RoleSelection.m */,
 				70C78AFE198DDCB5000B04AF /* Results.h */,
 				70C78AFF198DDCB5000B04AF /* Results.m */,
 				70C78B01198DDD44000B04AF /* VoteScreen.h */,
 				70C78B02198DDD44000B04AF /* VoteScreen.m */,
-				B7378992180767190076A88C /* MainScene.h */,
-				B7378993180767190076A88C /* MainScene.m */,
-				70C78AF5198DD951000B04AF /* Lobby.h */,
-				70C78AF6198DD951000B04AF /* Lobby.m */,
 				70C78AF9198DDAC7000B04AF /* Store.h */,
 				70C78AFA198DDAC7000B04AF /* Store.m */,
-				708BC2E6198D87490066F9DE /* Gameplay.h */,
-				708BC2E7198D87490066F9DE /* Gameplay.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -426,7 +417,6 @@
 				706B9F66198E5D8300B9A0D1 /* Content */,
 				706B9F69198E5DB400B9A0D1 /* Delegate */,
 				706B9F68198E5DA900B9A0D1 /* Player */,
-				F4510E9F198DE544000E520F /* Roles */,
 				706B9F67198E5D8F00B9A0D1 /* Scenes */,
 				5B12101719748413004C1E1D /* java */,
 				706B9F6A198E5DBD00B9A0D1 /* Activity */,
@@ -539,19 +529,6 @@
 				B73789861807631A0076A88C /* Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F4510E9F198DE544000E520F /* Roles */ = {
-			isa = PBXGroup;
-			children = (
-				F4510E7E198DB137000E520F /* Mafia.h */,
-				F4510E7F198DB137000E520F /* Mafia.m */,
-				F4510E81198DB25D000E520F /* Doctor.h */,
-				F4510E82198DB25D000E520F /* Doctor.m */,
-				F4510E84198DB2B6000E520F /* Police.h */,
-				F4510E85198DB2B6000E520F /* Police.m */,
-			);
-			name = Roles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -789,12 +766,9 @@
 				70C78B00198DDCB5000B04AF /* Results.m in Sources */,
 				70C78AF7198DD951000B04AF /* Lobby.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
-				F4510E86198DB2B6000E520F /* Police.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				F4510E79198DAF8B000E520F /* Player.m in Sources */,
-				F4510E80198DB137000E520F /* Mafia.m in Sources */,
 				70C78AFB198DDAC7000B04AF /* Store.m in Sources */,
-				F4510E83198DB25D000E520F /* Doctor.m in Sources */,
 				708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

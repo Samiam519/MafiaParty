@@ -24,6 +24,7 @@
     CCLabelTTF *_RoleTaskLabel;
     CCLabelTTF *_MafiaGangLabel;
     
+    
     // Text Fields
     CCTextField *_nounTextField;
     CCTextField *_verbTextField;
@@ -31,10 +32,15 @@
     
     // Gradient background
     CCNodeGradient *_backgroundGradient; //change color based on role
+    
+    CCNode *_iconNode;
 }
 
 -(void)didLoadFromCCB
 {
+    //init playerArray
+    _playerArray = [NSMutableArray array];
+    
     // Init player
     player = [[Player alloc] init];
     
@@ -50,6 +56,16 @@
     
     // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
+    
+    _nextLabel.string = @"Waiting for other players";
+    _nextButton.enabled = FALSE;
+    
+    int i = 0;
+    for (Player *player in _iconNode.children)
+    {
+        player.icon = ((Player *)_playerArray[i]).icon;
+        i++;
+    }
 }
 
 - (void)mafiaChat
