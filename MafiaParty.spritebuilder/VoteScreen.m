@@ -14,6 +14,12 @@
     CCNode *_playerNode;
 }
 
+-(void)didLoadFromCCB
+{
+    self.userInteractionEnabled = true;
+
+}
+
 - (void)vote
 {
     // Go to Results Scene

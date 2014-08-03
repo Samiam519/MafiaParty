@@ -45,7 +45,7 @@
 
 -(void) didLoadFromCCB {
     _playerArray = [NSMutableArray array];
-    self.userInteractionEnabled = FALSE;
+    self.userInteractionEnabled = true;
     
 //    // Load Role Selection scene
 //    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];

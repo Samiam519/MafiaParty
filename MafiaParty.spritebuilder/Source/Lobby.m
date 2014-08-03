@@ -23,6 +23,9 @@
 }
 
 -(void)didLoadFromCCB{
+    
+    self.userInteractionEnabled = true;
+
     lobbyRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/games"];
     _otherPlayers = [NSMutableArray array];
     [lobbyRef observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {

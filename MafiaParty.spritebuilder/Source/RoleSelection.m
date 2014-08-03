@@ -39,10 +39,13 @@
     CCNode *_iconNode;
     
     CGPoint touchLocation;
+    bool touchActivated;
 }
 
 -(void)didLoadFromCCB
 {
+    self.userInteractionEnabled = true;
+    
     //init playerArray
     _playerArray = [NSMutableArray array];
     
@@ -84,7 +87,9 @@
         _playerArray = theArray;
         for (int n = 0; n < _playerArray.count; n++)
         {
-            ((Player *)_iconNode.children[n]).icon = ((Player *)_playerArray[n]).icon;
+            Player *childSprite = _iconNode.children[n];
+            Player *curPlayer = _playerArray[n];
+            childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
         }
         
     }
@@ -188,6 +193,17 @@
 
 - (void)update:(CCTime)delta
 {
+    for (Player* curPlayer in _iconNode.children)
+    {
+        if (CGRectContainsPoint(curPlayer.boundingBox, touchLocation))
+        {
+            if (touchActivated)
+            {
+                CCLOG(@"You touched %@", curPlayer.name);
+            }
+        }
+    }
+    
     for (Player *currentPlayer in _playerArray)
     {
         if (!currentPlayer.turnEnded)
@@ -203,45 +219,18 @@
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // On touch began
+    touchActivated = true;
     touchLocation = [touch locationInWorld];
+    CCLOG(@"TouchLocation = (%f, %f)", touchLocation.x, touchLocation.y);
     
 }
 
-//-(void)performNightAction
-//{
-//    if (role == @"citizen")
-//    {
-//        CCLOG(@"Choose a word!");
-//    }
-//
-//    else if (role == "mafia")
-//    {
-//        CCLOG(@"Choose someone to kill!");
-//    }
-//
-//    else if (role == "police")
-//    {
-//        CCLOG(@"Choose someone to investigate!");
-//    }
-//
-//    else if (role == "doctor")
-//    {
-//        CCLOG(@"Choose someone to save!");
-//    }
-//    screenTouched = true;
-//}
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    touchActivated = false;
 
-//<<<<<<< HEAD
-//
-//-(void)setDead
-//{
-//    self.isDead = true;
-//}
-//
-//-(void)savePlayer
-//{
-//    self.isSaved = true;
-//}
-//=======
+}
+
+
 
 @end

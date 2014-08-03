@@ -22,7 +22,8 @@ static NSCache *profilePictureCache;
 
 -(void)didLoadFromCCB{
     _myRootRef = [[Firebase alloc] initWithUrl:@"https://mafiagame.firebaseio.com/games"];
-    
+    self.userInteractionEnabled = true;
+
     //    [_myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
     ////        NSLog(@"%@", snapshot);
     //        for (FDataSnapshot* child in snapshot.children) {
