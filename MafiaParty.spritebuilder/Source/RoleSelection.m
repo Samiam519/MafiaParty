@@ -12,6 +12,7 @@
 @implementation RoleSelection
 {
     Player *player;
+    
     CCLabelTTF *_jobDescription;
     CCLabelTTF *_roleDisplay;
     
@@ -34,6 +35,7 @@
     player.hasSelected = false;
     player.isDead = false;
     player.isSaved = false;
+    
     _nounTextField.textField.placeholder = @"test";
     
 }

@@ -9,6 +9,8 @@
 #import "CCNode.h"
 
 @interface Player : CCNode
+    @property (nonatomic,strong) NSString *name;
+    @property (nonatomic, strong) CCSprite *icon;
     @property (nonatomic, assign) NSString *role;
     @property (nonatomic, assign) NSString *typeOfDeath;
     @property (nonatomic, assign) NSString *word;
@@ -16,6 +18,7 @@
     @property (nonatomic, assign) BOOL isDead;
     @property (nonatomic, assign) BOOL isSaved;
     @property (nonatomic, assign) BOOL hasSelected;
+
 
 
 @end
