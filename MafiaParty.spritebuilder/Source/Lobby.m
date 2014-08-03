@@ -23,4 +23,9 @@
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }
 
+-(void)ghettoPlay{
+    CCScene *roleScreen = [CCBReader loadAsScene:@"Gameplay"];
+    [[CCDirector sharedDirector] replaceScene:roleScreen];
+}
+
 @end

@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>CCNodeGradient</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_backgroundGradient</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -135,9 +135,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
+							<real>0.72735673189163208</real>
 							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.006552395410835743</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -186,8 +186,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.25</real>
-							<real>0.05000000074505806</real>
+							<real>0.31999999284744263</real>
+							<real>0.050000041723251343</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -224,7 +224,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>You are:</string>
+							<string>You are the</string>
 							<false/>
 						</array>
 					</dict>
@@ -393,11 +393,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>100</real>
-							<real>29.4000244140625</real>
+							<real>0.20000000298023224</real>
+							<real>0.05000000074505806</real>
 							<integer>2</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -431,7 +431,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Mafia</string>
+							<string>ROLE</string>
 							<false/>
 						</array>
 					</dict>
@@ -638,7 +638,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Click to chat
+							<string>Tap to chat
 your gang:</string>
 							<false/>
 						</array>
@@ -775,6 +775,8 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1650,8 +1652,6 @@ your gang:</string>
 						<integer>17</integer>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2979,7 +2979,7 @@ your gang:</string>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>NightGameplay</string>
+		<string>RoleSelection</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

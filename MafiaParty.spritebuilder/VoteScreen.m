@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Voting.h"
+#import "VoteScreen.h"
 
-@implementation Voting{
+@implementation VoteScreen{
     CCNode *_playerNode;
 }
 

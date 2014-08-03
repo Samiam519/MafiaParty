@@ -57,4 +57,9 @@
     }];
 }
 
+-(void) toTheLobby {
+    CCScene *lobby = [CCBReader loadAsScene:@"Lobby"];
+    [[CCDirector sharedDirector] replaceScene:lobby];
+}
+
 @end

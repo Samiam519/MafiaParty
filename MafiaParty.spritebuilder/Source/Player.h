@@ -9,11 +9,13 @@
 #import "CCNode.h"
 
 @interface Player : CCNode
+    @property (nonatomic, assign) NSString *role;
+    @property (nonatomic, assign) NSString *typeOfDeath;
+    @property (nonatomic, assign) NSString *word;
 
--(void)performNightAction;
+    @property (nonatomic, assign) BOOL isDead;
+    @property (nonatomic, assign) BOOL isSaved;
+    @property (nonatomic, assign) BOOL hasSelected;
 
--(void)setDead;
-
--(void)savePlayer;
 
 @end
