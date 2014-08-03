@@ -65,11 +65,30 @@
     _nextLabel.string = @"Waiting for other players";
     _nextButton.enabled = FALSE;
     
-    for (int n = 0; n < _iconNode.children.count; n++)
-    {
-        ((Player *)_iconNode.children[n]).icon = ((Player *)_playerArray[n]).icon;
-    }
+    
 
+}
+
++(CCScene*)sendTheArray:(NSMutableArray*)theArray{
+    CCScene *newScene = [CCScene node];
+    [newScene addChild:[self gameplayWithArray:theArray]];
+    return newScene;
+}
+
++(id)gameplayWithArray:(NSMutableArray*)theArray{
+    return [[self alloc]initWithAnArray:theArray];
+}
+
+-(id)initWithAnArray:(NSMutableArray*)theArray{
+    if((self = (RoleSelection*) [CCBReader load:@"RoleSelection"])){
+        _playerArray = theArray;
+        for (int n = 0; n < _playerArray.count; n++)
+        {
+            ((Player *)_iconNode.children[n]).icon = ((Player *)_playerArray[n]).icon;
+        }
+        
+    }
+    return self;
 }
 
 - (void)mafiaChat

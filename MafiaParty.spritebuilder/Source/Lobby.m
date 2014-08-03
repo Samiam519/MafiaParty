@@ -112,7 +112,7 @@
 - (void)gameplay
 {
     // GHETTOOOOOOOOOOO
-    CCScene *roleScreen = (CCScene *)[CCBReader loadAsScene:@"Gameplay"];
+    CCScene *roleScreen = [Gameplay sendTheArray:_otherPlayers];
     [[CCDirector sharedDirector] replaceScene:roleScreen];
 }
 

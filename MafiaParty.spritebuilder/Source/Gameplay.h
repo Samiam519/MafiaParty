@@ -11,7 +11,7 @@
 @interface Gameplay : CCScene
 
 // Other Players Array
-@property (nonatomic, strong) NSMutableArray *playerArray;
+//@property (nonatomic, strong) 
 
 +(CCScene*)sendTheArray:(NSMutableArray*)theArray;
 

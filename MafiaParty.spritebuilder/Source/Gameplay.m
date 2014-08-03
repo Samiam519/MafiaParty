@@ -20,33 +20,36 @@
     Player *myself;
     CCNode *_iconNode;
     Firebase *_myRootRef;
+    NSMutableArray *_playerArray;
 }
 
 +(CCScene*)sendTheArray:(NSMutableArray*)theArray{
     CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithArray:(NSMutableArray*)theArray]];
+    [newScene addChild:[self gameplayWithArray:theArray]];
     return newScene;
 }
 
 +(id)gameplayWithArray:(NSMutableArray*)theArray{
-    return [[self alloc]initWithAnArray:(NSMutableArray*)theArray];
+    return [[self alloc]initWithAnArray:theArray];
 }
 
 -(id)initWithAnArray:(NSMutableArray*)theArray{
-    _playerArray = [NSMutableArray array];
-    
-    if((self = (Gameplay *) [CCBReader load:@"Gameplay"])){
+    if((self = (Gameplay*) [CCBReader load:@"Gameplay"])){
         _playerArray = theArray;
+        // Load Role Selection scene
+        CCScene *game = [RoleSelection sendTheArray:_playerArray];
+        [_loader addChild:game];
     }
     return self;
 }
 
 -(void) didLoadFromCCB {
+    _playerArray = [NSMutableArray array];
     self.userInteractionEnabled = FALSE;
     
-    // Load Role Selection scene
-    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
-    [_loader addChild:game];
+//    // Load Role Selection scene
+//    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+//    [_loader addChild:game];
 }
 
 - (id)init
@@ -64,7 +67,7 @@
 
 - (void)assignRoles:(NSMutableArray*)players
 {
-    playersLeftToAssign = players.count;
+    playersLeftToAssign = (int)players.count;
     if (players.count >= 11) {
         [self selectPlayerRole:@"mafia" withValue:3];
         playersLeftToAssign-= 3;

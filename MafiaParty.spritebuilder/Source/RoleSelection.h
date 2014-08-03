@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSMutableArray *verbArray;
 @property (nonatomic, strong) NSMutableArray *adjectiveArray;
 
++(CCScene*)sendTheArray:(NSMutableArray*)theArray;
+
 @property CCLabelTTF *nextLabel;
 @property CCButton *nextButton;
 
