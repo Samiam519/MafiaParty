@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>http://www.cocos2d-iphone.org/testpath1/testpath4.atom/20140802170016</id>
+    <title type="text">Cocos2D Developer Library Documentation</title>
+    <rights>Copyright © 2014 3.1.0. All rights reserved.</rights>
+    <link rel="self" href="http://www.cocos2d-iphone.org/testpath1/testpath4.atom"></link>
+    <docset:publisherName>3.1.0</docset:publisherName>
+    <docset:publisherID>org.cocos2d.documentation</docset:publisherID>
+    <updated>2014-08-02T17:00:16-07:00</updated>
+    <entry>
+        <id>tag:www.cocos2d-iphone.org,2014-08-02:org.cocos2d.Cocos2D-Developer-Library/1.0.0</id>
+        <title type="text">Cocos2D Developer Library Documentation</title>
+        <updated>2014-08-02T17:00:16-07:00</updated>
+        <content type="text">Cocos2D Developer Library Documentation (v1.0.0)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http:/www.cocos2d-iphone.org/testpath1/org.cocos2d.Cocos2D-Developer-Library-1.0.xar" length="1435675"></link>
+        <docset:identifier>org.cocos2d.Cocos2D-Developer-Library</docset:identifier>
+        <docset:version>1.0.0</docset:version>
+        <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>
