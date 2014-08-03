@@ -24,6 +24,7 @@
     CCLabelTTF *_RoleTaskLabel;
     CCLabelTTF *_MafiaGangLabel;
     
+    
     // Text Fields
     CCTextField *_nounTextField;
     CCTextField *_verbTextField;
@@ -31,10 +32,17 @@
     
     // Gradient background
     CCNodeGradient *_backgroundGradient; //change color based on role
+    
+    CCNode *_iconNode;
+    
+    CGPoint touchLocation;
 }
 
 -(void)didLoadFromCCB
 {
+    //init playerArray
+    _playerArray = [NSMutableArray array];
+    
     // Init player
     player = [[Player alloc] init];
     
@@ -50,6 +58,16 @@
     
     // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
+    
+    _nextLabel.string = @"Waiting for other players";
+    _nextButton.enabled = FALSE;
+    
+    int i = 0;
+    for (Player *player in _iconNode.children)
+    {
+        player.icon = ((Player *)_playerArray[i]).icon;
+        i++;
+    }
 }
 
 - (void)mafiaChat
@@ -81,7 +99,7 @@
     [_verbArray addObject:_verbTextField.textField.text];
     
     // Send array to Firebase
-
+    
 }
 
 - (void)getAdjective
@@ -90,30 +108,69 @@
     [_adjectiveArray addObject:_adjectiveTextField.textField.text];
     
     // Send array to Firebase
-
+    
 }
 
 #pragma mark - Player methods
 
-- (void)performNightAction
+- (void)performNightAction: (Player*)selected
 {
+    [self getNoun];
+    [self getAdjective];
+    [self getVerb];
+    
     // Perform player's night action
+    if ([player.role isEqualToString:@"mafia"]) {
+        [self setDead:selected];
+    }
+    else if ([player.role isEqualToString:@"doctor"])
+    {
+        [self savePlayer:selected];
+    }
+    else if ([player.role isEqualToString:@"police"])
+    {
+        [self suspectPlayer:selected];
+    }
+    else
+    {
+        [self beACitizen];
+    }
 }
 
-- (void)setDead
+- (void)setDead: (Player*)player
 {
     // Kill player
+    player.isDead = TRUE;
 }
 
-- (void)savePlayer
-{
+- (void)savePlayer: (Player*)player{
     // Save player
+    player.isSaved = TRUE;
+}
+
+-(void)suspectPlayer: (Player *)player
+{
+    if ([player.role isEqualToString:@"mafia"])
+    {
+        CCLOG(@"%@ is mafia!", player.name);
+    }
+    else
+    {
+        CCLOG(@"%@ is not mafia!", player.name);
+    }
+}
+
+-(void)beACitizen
+{
+    
 }
 
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     // On touch began
+    touchLocation = [touch locationInWorld];
+    
 }
 
 //-(void)performNightAction
