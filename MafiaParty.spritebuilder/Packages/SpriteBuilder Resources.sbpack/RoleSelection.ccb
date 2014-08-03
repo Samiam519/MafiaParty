@@ -602,7 +602,7 @@
 						<key>value</key>
 						<array>
 							<real>0.25</real>
-							<real>0.20000000298023224</real>
+							<real>0.18000000715255737</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -776,6 +776,8 @@ your gang:</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -810,7 +812,7 @@ your gang:</string>
 						<key>value</key>
 						<array>
 							<real>0.25</real>
-							<real>0.20000000298023224</real>
+							<real>0.18000000715255737</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -3047,8 +3049,6 @@ your gang:</string>
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

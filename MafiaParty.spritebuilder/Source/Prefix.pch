@@ -14,4 +14,7 @@
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
 #import "CCBuilderReader.h"
+#import <Firebase/Firebase.h>
+#import <FacebookSDK/FacebookSDK.h>
+#import <FirebaseSimpleLogin/FirebaseSimpleLogin.h>
 #endif

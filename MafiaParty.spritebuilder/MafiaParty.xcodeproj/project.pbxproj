@@ -37,6 +37,16 @@
 		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		927F61BA196C771E000F43EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
+		97CA5F4D198DB556008AD380 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F4C198DB556008AD380 /* FacebookSDK.framework */; };
+		97CA5F50198DB5A6008AD380 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F4F198DB5A6008AD380 /* libicucore.dylib */; };
+		97CA5F52198DB5AF008AD380 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F51198DB5AF008AD380 /* libc++.dylib */; };
+		97CA5F54198DB5F1008AD380 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F53198DB5F1008AD380 /* CFNetwork.framework */; };
+		97CA5F56198DB5F8008AD380 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F55198DB5F8008AD380 /* Security.framework */; };
+		97CA5F58198DB604008AD380 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F57198DB604008AD380 /* SystemConfiguration.framework */; };
+		97CA5F5A198DB629008AD380 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F59198DB629008AD380 /* Firebase.framework */; };
+		97CA5F5C198DB659008AD380 /* FirebaseSimpleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5B198DB659008AD380 /* FirebaseSimpleLogin.framework */; };
+		97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5D198DB675008AD380 /* Accounts.framework */; };
+		97CA5F60198DB67C008AD380 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA5F5F198DB67C008AD380 /* Social.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -150,6 +160,16 @@
 		70C78AEC198DB936000B04AF /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "MafiaParty/Images-2.xcassets"; sourceTree = SOURCE_ROOT; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* MafiaPartyAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaPartyAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97CA5F4C198DB556008AD380 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		97CA5F4F198DB5A6008AD380 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		97CA5F51198DB5AF008AD380 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		97CA5F53198DB5F1008AD380 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		97CA5F55198DB5F8008AD380 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		97CA5F57198DB604008AD380 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		97CA5F59198DB629008AD380 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		97CA5F5B198DB659008AD380 /* FirebaseSimpleLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseSimpleLogin.framework; sourceTree = "<group>"; };
+		97CA5F5D198DB675008AD380 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		97CA5F5F198DB67C008AD380 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -219,11 +239,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97CA5F60198DB67C008AD380 /* Social.framework in Frameworks */,
+				97CA5F5E198DB675008AD380 /* Accounts.framework in Frameworks */,
+				97CA5F58198DB604008AD380 /* SystemConfiguration.framework in Frameworks */,
+				97CA5F5A198DB629008AD380 /* Firebase.framework in Frameworks */,
+				97CA5F56198DB5F8008AD380 /* Security.framework in Frameworks */,
+				97CA5F54198DB5F1008AD380 /* CFNetwork.framework in Frameworks */,
+				97CA5F52198DB5AF008AD380 /* libc++.dylib in Frameworks */,
+				97CA5F50198DB5A6008AD380 /* libicucore.dylib in Frameworks */,
+				97CA5F5C198DB659008AD380 /* FirebaseSimpleLogin.framework in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
 				B77F1B3617B978D7009739AE /* OpenAL.framework in Frameworks */,
+				97CA5F4D198DB556008AD380 /* FacebookSDK.framework in Frameworks */,
 				B77F1B3817B978D7009739AE /* AudioToolbox.framework in Frameworks */,
 				B77F1B3A17B978D7009739AE /* AVFoundation.framework in Frameworks */,
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
@@ -402,6 +432,16 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97CA5F5F198DB67C008AD380 /* Social.framework */,
+				97CA5F5D198DB675008AD380 /* Accounts.framework */,
+				97CA5F5B198DB659008AD380 /* FirebaseSimpleLogin.framework */,
+				97CA5F59198DB629008AD380 /* Firebase.framework */,
+				97CA5F57198DB604008AD380 /* SystemConfiguration.framework */,
+				97CA5F55198DB5F8008AD380 /* Security.framework */,
+				97CA5F53198DB5F1008AD380 /* CFNetwork.framework */,
+				97CA5F51198DB5AF008AD380 /* libc++.dylib */,
+				97CA5F4F198DB5A6008AD380 /* libicucore.dylib */,
+				97CA5F4C198DB556008AD380 /* FacebookSDK.framework */,
 				5B12100B19748281004C1E1D /* BridgeKitV3.framework */,
 				5B12100919748273004C1E1D /* libEGL.so */,
 				8392007918EE8E3300B6C429 /* GLKit.framework */,
@@ -929,6 +969,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -964,6 +1008,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (

@@ -57,6 +57,13 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    // add any app-specific handling code here
+    return wasHandled;
+}
+
 - (CCScene*) startScene
 {
     return [CCBReader loadAsScene:@"MainScene"];
