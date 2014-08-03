@@ -14,6 +14,7 @@
 }
 
 -(void) didLoadFromCCB {
+    self.userInteractionEnabled = FALSE;
     CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
     [_loader addChild:game];
    
