@@ -10,8 +10,9 @@
 
 @implementation Store
 
-
--(void)back{
+- (void)back
+{
+    // Go back
     [[CCDirector sharedDirector] popScene];
 }
 

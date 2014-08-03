@@ -10,6 +10,7 @@
 
 @interface RoleSelection : CCScene
 
+// Other players array
 @property (nonatomic, strong) NSMutableArray *otherPlayers;
 
 @end

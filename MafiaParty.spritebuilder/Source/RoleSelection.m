@@ -11,17 +11,17 @@
 
 @implementation RoleSelection
 {
+    // Player i-var
     Player *player;
     
+    // Labels
     CCLabelTTF *_jobDescription;
     CCLabelTTF *_roleDisplay;
-    
-    CCNode *_mafiaNode;
-    CCNode *_playerNode;
     CCLabelTTF *_roleLabel;
     CCLabelTTF *_RoleTaskLabel;
     CCLabelTTF *_MafiaGangLabel;
     
+    // Text Fields
     CCTextField *_nounTextField;
     CCTextField *_verbTextField;
     CCTextField *_adjectiveTextField;
@@ -29,42 +29,50 @@
 
 -(void)didLoadFromCCB
 {
-    player = [[Player alloc]init];
-    //player.hasSelected = false;
+    // Init player
+    player = [[Player alloc] init];
+    
+    // Set player booleans
     player.isDead = false;
     player.isSaved = false;
     
+    // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
-    
 }
 
--(void)mafiaChat{
-    
+- (void)mafiaChat
+{
+    // Chat with other mafia people
 }
 
--(void)next{
-    CCScene *results = [CCBReader loadAsScene:@"Results"];
+- (void)next
+{
+    // Load Results Scene
+    CCScene *results = (CCScene *)[CCBReader loadAsScene:@"Results"];
     [[CCDirector sharedDirector] replaceScene:results];
 }
 
 
 
--(void)performNightAction {
-    
-}
-
--(void)setDead {
-    
-}
-
--(void)savePlayer{
-    
-}
-
-
--(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+- (void)performNightAction
 {
-    
+    // Perform player's night action
+}
+
+- (void)setDead
+{
+    // Kill player
+}
+
+- (void)savePlayer
+{
+    // Save player
+}
+
+
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    // On touch began
 }
 
 //-(void)performNightAction

@@ -10,33 +10,26 @@
 
 @interface Player : CCNode
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    @property (nonatomic, assign) BOOL isDead;
-    @property (nonatomic, assign) BOOL isSaved;
-    @property (nonatomic, assign) BOOL hasSelected;
-=======
-=======
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
+// Public Booleans
 @property (nonatomic,assign)  BOOL isDead;
 @property (nonatomic,assign)  BOOL isSaved;
+
+// Player Image
 @property (nonatomic,strong)  CCSprite *icon;
+
+// Player Name
 @property (nonatomic,strong)  NSString *FBname;
-@property (nonatomic,assign) BOOL hasSelected;
-@property (nonatomic,assign) BOOL isHost;
 
-@property (nonatomic,strong) NSString *weirdId;
+// Set current player info
+- (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
 
--(void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
+// Perform the player's night action
+- (void)performNightAction;
 
--(void)performNightAction;
-<<<<<<< HEAD
->>>>>>> f25038c6dc8ac164a6d97cde9f192e147675db80
-=======
->>>>>>> 4c8950ae3ea858aa43c7a934b9b9f14814524a89
+// Set the player to dead
+- (void)setDead;
 
--(void)setDead;
-
--(void)savePlayer;
+// Save the player
+- (void)savePlayer;
 
 @end
