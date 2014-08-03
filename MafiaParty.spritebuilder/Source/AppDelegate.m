@@ -68,8 +68,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",theString]];
-    [ref removeValue];
+//    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",theString]];
+//    [ref removeValue];
     [super applicationDidEnterBackground:application];
     [[CCDirector sharedDirector] stopAnimation];
 }
@@ -79,6 +79,10 @@
     //TODO: RETURN TO FIRST LOGIN SCREEN
     [super applicationWillEnterForeground:application];
     [[CCDirector sharedDirector] startAnimation];
+    
+    
+//    CCScene *scene =  [CCBReader loadAsScene:@"MainScene"];
+//    [[CCDirector sharedDirector] pushScene:scene];
 }
 
 -(void) applicationWillResignActive:(UIApplication *)application
@@ -99,13 +103,9 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    /*
-     Called when the application is about to terminate.
-     See also applicationDidEnterBackground:.
-     */
-    
-//    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",(NSString*)_theID]];
-//    [ref removeAllObservers];
+    Firebase *ref = [[Firebase alloc]initWithUrl:[NSString stringWithFormat:@"https://mafiagame.firebaseio.com/games/%@",theString]];
+    [ref removeValue];
+
 }
 
 -(void)icallthis:(NSNotification*)theNotification{

@@ -106,7 +106,7 @@
                          }
                      }];
     
-    _authRef = [_myRootRef.root childByAppendingPath:@".info/authenticated"];
+//    _authRef = [_myRootRef.root childByAppendingPath:@".info/authenticated"];
     
 //    [_authRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot* snapshot) {
 //        BOOL isAuthenticated = [snapshot.value boolValue];
