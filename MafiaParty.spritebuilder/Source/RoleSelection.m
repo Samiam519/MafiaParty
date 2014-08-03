@@ -26,11 +26,8 @@
     CCTextField *_verb2TextField;
     CCTextField *_adjective1TextField;
     CCTextField *_adjective2TextField;
-<<<<<<< HEAD
-=======
     
     CCNodeGradient *_backgroundGradient; //change color based on role
->>>>>>> 0f87ed1294482848ec314d4198bcceecb159d13c
 }
 
 -(void)mafiaChat{
