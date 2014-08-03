@@ -15,6 +15,7 @@
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		708BC2E8198D87490066F9DE /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2E7198D87490066F9DE /* Gameplay.m */; };
 		708BC2EC198D89710066F9DE /* RoleSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BC2EB198D89710066F9DE /* RoleSelection.m */; };
+		70C78AED198DB936000B04AF /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C78AEC198DB936000B04AF /* Images-2.xcassets */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		927F619E196C771E000F43EF /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7378993180767190076A88C /* MainScene.m */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
@@ -136,7 +137,7 @@
 		5B121013197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121015197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B12101B19748413004C1E1D /* MafiaPartyActivity.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = MafiaPartyActivity.java; sourceTree = "<group>"; };
-		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = file; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B121021197484A3004C1E1D /* MafiaParty Java.jar */ = {isa = PBXFileReference; explicitFileType = compiled.java.jar; includeInIndex = 0; path = "MafiaParty Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B12102E197484FA004C1E1D /* MafiaPartyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MafiaPartyActivity.h; path = Source/MafiaPartyActivity.h; sourceTree = "<group>"; };
 		5B12102F197484FA004C1E1D /* MafiaPartyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MafiaPartyActivity.m; path = Source/MafiaPartyActivity.m; sourceTree = "<group>"; };
 		5B121033197485FE004C1E1D /* Android-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Android-Info.plist"; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		708BC2E7198D87490066F9DE /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
 		708BC2EA198D89710066F9DE /* RoleSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoleSelection.h; path = Source/RoleSelection.h; sourceTree = "<group>"; };
 		708BC2EB198D89710066F9DE /* RoleSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoleSelection.m; path = Source/RoleSelection.m; sourceTree = "<group>"; };
+		70C78AEC198DB936000B04AF /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "MafiaParty/Images-2.xcassets"; sourceTree = SOURCE_ROOT; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* MafiaPartyAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaPartyAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70C78AEC198DB936000B04AF /* Images-2.xcassets */,
 				5BA4619E1974C88900785744 /* AndroidManifest.xml */,
 				5B121033197485FE004C1E1D /* Android-Info.plist */,
 				5B121034197485FE004C1E1D /* Info.plist */,
@@ -510,7 +513,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SBVP8ED765;
+						DevelopmentTeam = LQMMNPY77Z;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -554,7 +557,7 @@
 		};
 		5B121003197481CE004C1E1D /* cocos2dJava.jar */ = {
 			isa = PBXReferenceProxy;
-			fileType = file;
+			fileType = compiled.java.jar;
 			path = cocos2dJava.jar;
 			remoteRef = 5B121002197481CE004C1E1D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -597,6 +600,7 @@
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				70C78AED198DB936000B04AF /* Images-2.xcassets in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
@@ -919,6 +923,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -952,6 +958,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
