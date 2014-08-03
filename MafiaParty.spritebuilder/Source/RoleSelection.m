@@ -19,15 +19,23 @@
     CCNode *_playerNode;
     CCLabelTTF *_roleLabel;
     CCLabelTTF *_RoleTaskLabel;
+    CCLabelTTF *_MafiaGangLabel;
     
-    CCTextField *_noun1TextField;
-    CCTextField *_noun2TextField;
-    CCTextField *_verb1TextField;
-    CCTextField *_verb2TextField;
-    CCTextField *_adjective1TextField;
-    CCTextField *_adjective2TextField;
+    CCTextField *_nounTextField;
+    CCTextField *_verbTextField;
+    CCTextField *_adjectiveTextField;
     
     CCNodeGradient *_backgroundGradient; //change color based on role
+}
+
+-(void)didLoadFromCCB
+{
+    player = [[Player alloc]init];
+    player.hasSelected = false;
+    player.isDead = false;
+    player.isSaved = false;
+    _nounTextField.textField.placeholder = @"test";
+    
 }
 
 -(void)mafiaChat{
@@ -39,14 +47,7 @@
     [[CCDirector sharedDirector] replaceScene:results];
 }
 
--(void)didLoadFromCCB
-{
-    player = [[Player alloc]init];
-    player.hasSelected = false;
-    player.isDead = false;
-    player.isSaved = false;
-    
-}
+
 
 -(void)performNightAction {
     
