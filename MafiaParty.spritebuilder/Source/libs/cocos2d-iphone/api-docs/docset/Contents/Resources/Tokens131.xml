@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/CCTouchPhase.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/CCTouchPhase</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCTouch.h</DeclaredIn>
+            
+			
+			<NodeRef refid="131"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCTouchPhaseBegan</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCTouchPhaseBegan</Declaration>
+            
+            <DeclaredIn>CCTouch.h</DeclaredIn>
+            
+            <NodeRef refid="131"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCTouchPhaseMoved</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCTouchPhaseMoved</Declaration>
+            
+            <DeclaredIn>CCTouch.h</DeclaredIn>
+            
+            <NodeRef refid="131"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCTouchPhaseStationary</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCTouchPhaseStationary</Declaration>
+            
+            <DeclaredIn>CCTouch.h</DeclaredIn>
+            
+            <NodeRef refid="131"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCTouchPhaseEnded</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCTouchPhaseEnded</Declaration>
+            
+            <DeclaredIn>CCTouch.h</DeclaredIn>
+            
+            <NodeRef refid="131"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCTouchPhaseCancelled</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCTouchPhaseCancelled</Declaration>
+            
+            <DeclaredIn>CCTouch.h</DeclaredIn>
+            
+            <NodeRef refid="131"/>
+        </Token>
+        
+	</File>
+</Tokens>

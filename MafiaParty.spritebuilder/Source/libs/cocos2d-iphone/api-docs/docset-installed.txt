@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/samjimenez/Library/Developer/Shared/Documentation/DocSets/org.cocos2d.Cocos2D-Developer-Library.docset
+Time: 2014-08-02 23:50:17 +0000
