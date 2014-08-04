@@ -11,11 +11,16 @@
 @interface RoleSelection : CCScene
 
 // Other players array
-@property (nonatomic, strong) NSMutableArray *otherPlayers;
+@property (nonatomic, strong) NSMutableArray *playerArray;
 
 // Arrays
 @property (nonatomic, strong) NSMutableArray *nounArray;
 @property (nonatomic, strong) NSMutableArray *verbArray;
 @property (nonatomic, strong) NSMutableArray *adjectiveArray;
+
++(CCScene*)sendTheArray:(NSMutableArray*)theArray;
+
+@property CCLabelTTF *nextLabel;
+@property CCButton *nextButton;
 
 @end

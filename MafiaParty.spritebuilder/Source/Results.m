@@ -34,6 +34,10 @@
 
 - (void)didLoadFromCCB
 {
+    
+    self.userInteractionEnabled = true;
+
+    
     // Initialize arrays
     _eachLine = [[NSArray alloc] init];
     _nounsToRemove = [[NSArray alloc] init];
@@ -56,15 +60,15 @@
     _storyLabel.string = _eachLine[randomIndex];
     
     // Find all nouns in the story and replace them
-//    for(NSString *noun in _eachLine[randomIndex])
-//    {
-//        if ([noun isEqualToString:@"<noun>"])
-//        {
-//            // Replace it with a random noun
-//            randomNoun = arc4random() % [roleSelectionContent.nounArray count];
-//            //noun = roleSelectionContent.nounArray[randomNoun];
-//        }
-//    }
+    //    for(NSString *noun in _eachLine[randomIndex])
+    //    {
+    //        if ([noun isEqualToString:@"<noun>"])
+    //        {
+    //            // Replace it with a random noun
+    //            randomNoun = arc4random() % [roleSelectionContent.nounArray count];
+    //            //noun = roleSelectionContent.nounArray[randomNoun];
+    //        }
+    //    }
 }
 
 #pragma mark - Selectors
@@ -96,19 +100,19 @@
     {
         // Present the share dialog
         [FBDialogs presentShareDialogWithLink:params.link handler:^(FBAppCall *call, NSDictionary *results, NSError *error)
-        {
-            if(error)
-            {
-                // An error occurred, we need to handle the error
-                // See: https://developers.facebook.com/docs/ios/errors
-                NSLog(@"Error publishing story: %@", error.description);
-            }
-            else
-            {
-                // Success
-                NSLog(@"result %@", results);
-            }
-        }];
+         {
+             if(error)
+             {
+                 // An error occurred, we need to handle the error
+                 // See: https://developers.facebook.com/docs/ios/errors
+                 NSLog(@"Error publishing story: %@", error.description);
+             }
+             else
+             {
+                 // Success
+                 NSLog(@"result %@", results);
+             }
+         }];
     }
     
     else

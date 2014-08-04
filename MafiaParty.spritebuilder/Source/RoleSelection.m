@@ -23,6 +23,10 @@
     CCLabelTTF *_roleLabel;
     CCLabelTTF *_RoleTaskLabel;
     CCLabelTTF *_MafiaGangLabel;
+    CCLabelTTF *_nextLabel;
+    
+    CCButton *_nextButton;
+    
     
     // Text Fields
     CCTextField *_nounTextField;
@@ -31,10 +35,22 @@
     
     // Gradient background
     CCNodeGradient *_backgroundGradient; //change color based on role
+    
+    CCNode *_iconNode;
+    
+    CGPoint touchLocation;
+    bool touchActivated;
+    int playersLeftToAssign;
 }
 
 -(void)didLoadFromCCB
 {
+    playersLeftToAssign = _playerArray.count;
+    self.userInteractionEnabled = true;
+    
+    //init playerArray
+    _playerArray = [NSMutableArray array];
+    
     // Init player
     player = [[Player alloc] init];
     
@@ -50,6 +66,36 @@
     
     // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
+    
+    _nextLabel.string = @"Waiting for other players";
+    _nextButton.enabled = FALSE;
+    
+
+}
+
++(CCScene*)sendTheArray:(NSMutableArray*)theArray{
+    CCScene *newScene = [CCScene node];
+    [newScene addChild:[self gameplayWithArray:theArray]];
+    return newScene;
+}
+
++(id)gameplayWithArray:(NSMutableArray*)theArray{
+    return [[self alloc]initWithAnArray:theArray];
+}
+
+-(id)initWithAnArray:(NSMutableArray*)theArray{
+    if((self = (RoleSelection*) [CCBReader load:@"RoleSelection"])){
+        _playerArray = theArray;
+        for (int n = 0; n < _playerArray.count; n++)
+        {
+            Player *childSprite = _iconNode.children[n];
+            Player *curPlayer = _playerArray[n];
+            childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
+            childSprite.FBname = curPlayer.FBname;
+        }
+        [self assignRolesToArray:_playerArray];
+    }
+    return self;
 }
 
 - (void)mafiaChat
@@ -81,7 +127,7 @@
     [_verbArray addObject:_verbTextField.textField.text];
     
     // Send array to Firebase
-
+    
 }
 
 - (void)getAdjective
@@ -90,67 +136,199 @@
     [_adjectiveArray addObject:_adjectiveTextField.textField.text];
     
     // Send array to Firebase
-
+    
 }
 
 #pragma mark - Player methods
 
-- (void)performNightAction
+- (void)performNightAction: (Player*)selected
 {
+    [self getNoun];
+    [self getAdjective];
+    [self getVerb];
+    
     // Perform player's night action
+    if ([player.role isEqualToString:@"Mafia"]) {
+        [self setDead:selected];
+    }
+    else if ([player.role isEqualToString:@"Doctor"])
+    {
+        [self savePlayer:selected];
+    }
+    else if ([player.role isEqualToString:@"Police"])
+    {
+        [self suspectPlayer:selected];
+    }
+    else
+    {
+        [self beACitizen];
+    }
 }
 
-- (void)setDead
+- (void)setDead: (Player*)player
 {
     // Kill player
+    player.isDead = TRUE;
 }
 
-- (void)savePlayer
-{
+- (void)savePlayer: (Player*)player{
     // Save player
+    player.isSaved = TRUE;
+}
+
+-(void)suspectPlayer: (Player *)curPlayer
+{
+    if ([curPlayer.role isEqualToString:@"Mafia"])
+    {
+        CCLOG(@"%@ is mafia!", curPlayer.FBname);
+    }
+    else
+    {
+        CCLOG(@"%@ is not mafia!", curPlayer.FBname);
+    }
+}
+
+-(void)beACitizen
+{
+    
+}
+
+- (void)assignRoles:(NSMutableArray*)players
+{
+    playersLeftToAssign = (int)players.count;
+    if (players.count >= 11) {
+        [self selectPlayerRole:@"Mafia" withValue:3];
+        playersLeftToAssign -= 3;
+    }
+    else if (players.count >= 7) {
+        [self selectPlayerRole:@"Mafia" withValue:2];
+        playersLeftToAssign -= 2;
+    }
+    else if (players.count >= 4) {
+        [self selectPlayerRole:@"Mafia" withValue:1];
+        playersLeftToAssign -= 1;
+    }
+    [self selectPlayerRole:@"Doctor" withValue:1];
+    [self selectPlayerRole:@"Police" withValue:1];
+    playersLeftToAssign -= 2;
+    [self selectPlayerRole:@"Citizen" withValue:playersLeftToAssign];
+    
+}
+
+- (void)selectPlayerRole: (NSString*)role withValue:(int)repeatValue
+{
+    for (int i = 0; i < repeatValue; i++) {
+        int selected = arc4random() % _playerArray.count;
+        if (!((Player *)_playerArray[selected]).alreadyPicked) {
+            ((Player *)_playerArray[selected]).role = role;
+            ((Player *)_playerArray[selected]).alreadyPicked = TRUE;
+        }else if (((Player *)_playerArray[selected]).alreadyPicked){
+            //[self selectPlayerRole:role withValue:repeatValue];
+            return;
+        }
+    }
+}
+
+-(void)assignRolesToArray:(NSMutableArray *)players
+{
+    NSMutableArray *alreadyAssigned = [NSMutableArray array];
+    int mafiaToAssign;
+    if (players.count >= 11) {
+        mafiaToAssign = 3;
+    }
+    else if (players.count >= 7) {
+        mafiaToAssign = 2;
+    }
+    else {
+        mafiaToAssign = 1;
+    }
+    int i = 0;
+    while (i < mafiaToAssign)
+    {
+        int randNum = arc4random() % players.count;
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"Mafia";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    i = 0;
+    while (i < 1)
+    {
+        int randNum = [self randomNumberUpTo:players.count];
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"Doctor";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    while (i < 1)
+    {
+        int randNum = [self randomNumberUpTo:players.count];
+        if ([alreadyAssigned containsObject:[NSNumber numberWithInt:randNum]])
+        {
+            continue;
+        }
+        Player *curPlayer = players[randNum];
+        curPlayer.role = @"Police";
+        [alreadyAssigned addObject:[NSNumber numberWithInt:randNum]];
+        i++;
+    }
+    
+}
+
+- (void)update:(CCTime)delta
+{
+    for (Player* curPlayer in _iconNode.children)
+    {
+        if (CGRectContainsPoint(curPlayer.boundingBox, touchLocation))
+        {
+            if (touchActivated)
+            {
+                CCLOG(@"You touched %@", curPlayer.FBname);
+                //[myself performNightAction: curPlayer];
+            }
+        }
+    }
+    
+    for (Player *currentPlayer in _playerArray)
+    {
+        if (!currentPlayer.turnEnded)
+        {
+            return;
+        }
+    }
+    _nextButton.enabled = true;
+    _nextLabel.string = @"The next morning...";
+    _roleLabel.string = @"";
+    _RoleTaskLabel.string = @"";
 }
 
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    // On touch began
+    //On touch began
+    touchActivated = true;
+    touchLocation = [touch locationInWorld];
+    CCLOG(@"TouchLocation = (%f, %f)", touchLocation.x, touchLocation.y);
+    
 }
 
-//-(void)performNightAction
-//{
-//    if (role == @"citizen")
-//    {
-//        CCLOG(@"Choose a word!");
-//    }
-//
-//    else if (role == "mafia")
-//    {
-//        CCLOG(@"Choose someone to kill!");
-//    }
-//
-//    else if (role == "police")
-//    {
-//        CCLOG(@"Choose someone to investigate!");
-//    }
-//
-//    else if (role == "doctor")
-//    {
-//        CCLOG(@"Choose someone to save!");
-//    }
-//    screenTouched = true;
-//}
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    touchActivated = false;
 
-//<<<<<<< HEAD
-//
-//-(void)setDead
-//{
-//    self.isDead = true;
-//}
-//
-//-(void)savePlayer
-//{
-//    self.isSaved = true;
-//}
-//=======
+}
+
+-(int)randomNumberUpTo:(int)num
+{
+    return arc4random() % num;
+}
 
 @end
