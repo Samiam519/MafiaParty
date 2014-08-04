@@ -34,10 +34,6 @@
 
 - (void)didLoadFromCCB
 {
-    
-    self.userInteractionEnabled = true;
-
-    
     // Initialize arrays
     _eachLine = [[NSArray alloc] init];
     _nounsToRemove = [[NSArray alloc] init];

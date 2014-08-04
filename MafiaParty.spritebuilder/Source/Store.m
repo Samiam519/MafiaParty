@@ -10,12 +10,6 @@
 
 @implementation Store
 
--(void)didLoadFromCCB
-{
-    self.userInteractionEnabled = true;
-
-}
-
 - (void)back
 {
     // Go back

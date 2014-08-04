@@ -7,7 +7,6 @@
 //
 
 #import "VoteScreen.h"
-#import "Player.h"
 
 @implementation VoteScreen
 {

@@ -14,6 +14,8 @@
     // Array of roles
     NSArray *_rolesArray;
     
+
+    
     // Player
     Player *player;
     
@@ -69,13 +71,19 @@
     
     _nextLabel.string = @"Waiting for other players";
     _nextButton.enabled = FALSE;
-    
 
 }
 
 +(CCScene*)sendTheArray:(NSMutableArray*)theArray{
     CCScene *newScene = [CCScene node];
     [newScene addChild:[self gameplayWithArray:theArray]];
+    return newScene;
+}
+
++(CCScene*)sendMySelf:(int)indexOfSelf{
+    CCScene *newScene = [CCScene node];
+    [newScene addChild:[self gameplayWithSelf:(int)indexOfSelf]];
+    
     return newScene;
 }
 
@@ -96,137 +104,6 @@
         [self assignRolesToArray:_playerArray];
     }
     return self;
-}
-
-- (void)mafiaChat
-{
-    // Chat with other mafia people
-}
-
-- (void)next
-{
-    // Load Results Scene
-    CCScene *results = (CCScene *)[CCBReader loadAsScene:@"Results"];
-    [[CCDirector sharedDirector] replaceScene:results];
-}
-
-#pragma mark - Word Getters
-
-- (void)getNoun
-{
-    // Add text to array
-    [_nounArray addObject:_nounTextField.textField.text];
-    
-    // Send array to Firebase
-    
-}
-
-- (void)getVerb
-{
-    // Add text to array
-    [_verbArray addObject:_verbTextField.textField.text];
-    
-    // Send array to Firebase
-    
-}
-
-- (void)getAdjective
-{
-    // Add text to array
-    [_adjectiveArray addObject:_adjectiveTextField.textField.text];
-    
-    // Send array to Firebase
-    
-}
-
-#pragma mark - Player methods
-
-- (void)performNightAction: (Player*)selected
-{
-    [self getNoun];
-    [self getAdjective];
-    [self getVerb];
-    
-    // Perform player's night action
-    if ([player.role isEqualToString:@"Mafia"]) {
-        [self setDead:selected];
-    }
-    else if ([player.role isEqualToString:@"Doctor"])
-    {
-        [self savePlayer:selected];
-    }
-    else if ([player.role isEqualToString:@"Police"])
-    {
-        [self suspectPlayer:selected];
-    }
-    else
-    {
-        [self beACitizen];
-    }
-}
-
-- (void)setDead: (Player*)player
-{
-    // Kill player
-    player.isDead = TRUE;
-}
-
-- (void)savePlayer: (Player*)player{
-    // Save player
-    player.isSaved = TRUE;
-}
-
--(void)suspectPlayer: (Player *)curPlayer
-{
-    if ([curPlayer.role isEqualToString:@"Mafia"])
-    {
-        CCLOG(@"%@ is mafia!", curPlayer.FBname);
-    }
-    else
-    {
-        CCLOG(@"%@ is not mafia!", curPlayer.FBname);
-    }
-}
-
--(void)beACitizen
-{
-    
-}
-
-- (void)assignRoles:(NSMutableArray*)players
-{
-    playersLeftToAssign = (int)players.count;
-    if (players.count >= 11) {
-        [self selectPlayerRole:@"Mafia" withValue:3];
-        playersLeftToAssign -= 3;
-    }
-    else if (players.count >= 7) {
-        [self selectPlayerRole:@"Mafia" withValue:2];
-        playersLeftToAssign -= 2;
-    }
-    else if (players.count >= 4) {
-        [self selectPlayerRole:@"Mafia" withValue:1];
-        playersLeftToAssign -= 1;
-    }
-    [self selectPlayerRole:@"Doctor" withValue:1];
-    [self selectPlayerRole:@"Police" withValue:1];
-    playersLeftToAssign -= 2;
-    [self selectPlayerRole:@"Citizen" withValue:playersLeftToAssign];
-    
-}
-
-- (void)selectPlayerRole: (NSString*)role withValue:(int)repeatValue
-{
-    for (int i = 0; i < repeatValue; i++) {
-        int selected = arc4random() % _playerArray.count;
-        if (!((Player *)_playerArray[selected]).alreadyPicked) {
-            ((Player *)_playerArray[selected]).role = role;
-            ((Player *)_playerArray[selected]).alreadyPicked = TRUE;
-        }else if (((Player *)_playerArray[selected]).alreadyPicked){
-            //[self selectPlayerRole:role withValue:repeatValue];
-            return;
-        }
-    }
 }
 
 -(void)assignRolesToArray:(NSMutableArray *)players
@@ -283,8 +160,126 @@
     
 }
 
+-(int)randomNumberUpTo:(int)num
+{
+    return arc4random() % num;
+}
+
+- (void)mafiaChat
+{
+    // Chat with other mafia people
+}
+
+- (void)next
+{
+    // Load Results Scene
+    CCScene *results = (CCScene *)[CCBReader loadAsScene:@"Results"];
+    [[CCDirector sharedDirector] replaceScene:results];
+}
+
+#pragma mark - Word Getters
+
+- (void)getNoun
+{
+    // Add text to array
+    [_nounArray addObject:_nounTextField.textField.text];
+    
+    // Send array to Firebase
+    
+}
+
+- (void)getVerb
+{
+    // Add text to array
+    [_verbArray addObject:_verbTextField.textField.text];
+    
+    // Send array to Firebase
+    
+}
+
+- (void)getAdjective
+{
+    // Add text to array
+    [_adjectiveArray addObject:_adjectiveTextField.textField.text];
+    
+    // Send array to Firebase
+    
+}
+
+#pragma mark - Player methods
+
+- (void)performNightAction: (Player*)selected
+{
+    [self getNoun];
+    [self getAdjective];
+    [self getVerb];
+    
+    // Perform player's night action
+    if ([player.role isEqualToString:@"mafia"]) {
+        [self setDead:selected];
+    }
+    else if ([player.role isEqualToString:@"doctor"])
+    {
+        [self savePlayer:selected];
+    }
+    else if ([player.role isEqualToString:@"police"])
+    {
+        [self suspectPlayer:selected];
+    }
+    else
+    {
+        [self beACitizen];
+    }
+}
+
+- (void)setDead: (Player*)player
+{
+    // Kill player
+    player.isDead = TRUE;
+}
+
+- (void)savePlayer: (Player*)player{
+    // Save player
+    player.isSaved = TRUE;
+}
+
+-(void)suspectPlayer: (Player *)player
+{
+    if ([player.role isEqualToString:@"mafia"])
+    {
+        CCLOG(@"%@ is mafia!", player.name);
+    }
+    else
+    {
+        CCLOG(@"%@ is not mafia!", player.name);
+    }
+}
+
+-(void)beACitizen
+{
+    
+}
+
 - (void)update:(CCTime)delta
 {
+    _roleLabel.string = ((Player *)_playerArray[_passedIndex]).role;
+    if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Mafia"])
+    {
+        _RoleTaskLabel.string = @"Who do you want to kill?";
+    }
+    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Doctor"])
+    {
+        _RoleTaskLabel.string = @"Who do you want to save?";
+    }
+    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Police"])
+    {
+        _RoleTaskLabel.string = @"Who do you want to investigate?";
+    }
+    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Citizen"])
+    {
+        _RoleTaskLabel.string = @"Silly citizen, you can't do anything";
+    }
+    
     for (Player* curPlayer in _iconNode.children)
     {
         if (CGRectContainsPoint(curPlayer.boundingBox, touchLocation))
@@ -306,8 +301,7 @@
     }
     _nextButton.enabled = true;
     _nextLabel.string = @"The next morning...";
-    _roleLabel.string = @"";
-    _RoleTaskLabel.string = @"";
+    
 }
 
 
@@ -323,12 +317,44 @@
 -(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     touchActivated = false;
-
+    
 }
 
--(int)randomNumberUpTo:(int)num
-{
-    return arc4random() % num;
-}
+//-(void)performNightAction
+//{
+//    if (role == @"citizen")
+//    {
+//        CCLOG(@"Choose a word!");
+//    }
+//
+//    else if (role == "mafia")
+//    {
+//        CCLOG(@"Choose someone to kill!");
+//    }
+//
+//    else if (role == "police")
+//    {
+//        CCLOG(@"Choose someone to investigate!");
+//    }
+//
+//    else if (role == "doctor")
+//    {
+//        CCLOG(@"Choose someone to save!");
+//    }
+//    screenTouched = true;
+//}
+
+//<<<<<<< HEAD
+//
+//-(void)setDead
+//{
+//    self.isDead = true;
+//}
+//
+//-(void)savePlayer
+//{
+//    self.isSaved = true;
+//}
+//=======
 
 @end

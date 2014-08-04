@@ -16,9 +16,22 @@
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
     
-    
     // CCSprite *icon;
     Player *selectedPlayer;
+}
+
++(NSNumber *)sharedInstance
+{
+    static dispatch_once_t predicate = 0;
+    __strong static id sharedObject = nil;
+    dispatch_once(&predicate, ^{
+        sharedObject = [[self alloc] init];
+    });
+    return sharedObject;
+}
+
+- (void)dealloc{
+    //empty method just in case
 }
 
 - (id)init
@@ -26,25 +39,28 @@
     // Initialize
     self = [super init];
     
+    
     // If intialized,
     if (self)
+        playerIndex = [[NSNumber alloc] initWithInt:indexOfSelf];
         _alreadyPicked = FALSE;
-    if ([_role isEqualToString:@"Mafia"]) {
+    
+    if ([_role isEqualToString:@"mafia"]) {
         _canKill = TRUE;
         _canSave = FALSE;
         _canSuspect = FALSE;
     }
-    if ([_role isEqualToString:@"Doctor"]) {
+    if ([_role isEqualToString:@"doctor"]) {
         _canKill = FALSE;
         _canSave = TRUE;
         _canSuspect = FALSE;
     }
-    if ([_role isEqualToString:@"Police"]) {
+    if ([_role isEqualToString:@"police"]) {
         _canKill = FALSE;
         _canSave = FALSE;
         _canSuspect = TRUE;
     }
-    if ([_role isEqualToString:@"Citizen"]) {
+    if ([_role isEqualToString:@"citizen"]) {
         _canKill = FALSE;
         _canSave = FALSE;
         _canSuspect = FALSE;
@@ -69,19 +85,19 @@
 {
     //Add code for getting strings
     
-    if ([_role isEqualToString:@"Mafia"]) {
+    if ([_role isEqualToString:@"mafia"]) {
         [self setDead:actionWithPlayer];
         // Kill player
     }
-    else if ([_role isEqualToString:@"Doctor"]) {
+    else if ([_role isEqualToString:@"doctor"]) {
         // Save player
         [self savePlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"Police"]) {
+    else if ([_role isEqualToString:@"police"]) {
         // Suspect player
         [self suspectPlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"Citizen"]) {
+    else if ([_role isEqualToString:@"citizen"]) {
         
     }
     _turnEnded = TRUE;
@@ -102,7 +118,7 @@
 - (void)suspectPlayer: (Player*)player
 {
     //Suspect
-    if ([player.role isEqualToString:@"Mafia"]) {
+    if ([player.role isEqualToString:@"mafia"]) {
         CCLOG(@"Player is mafia!");
     }
     else

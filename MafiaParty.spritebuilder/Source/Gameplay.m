@@ -20,36 +20,40 @@
     Player *myself;
     CCNode *_iconNode;
     Firebase *_myRootRef;
+    int indexOFMYSELF;
     NSMutableArray *_playerArray;
 }
 
-+(CCScene*)sendTheArray:(NSMutableArray*)theArray{
++(CCScene*)sendMySelf:(int)indexOfSelf{
     CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithArray:theArray]];
+    [newScene addChild:[self gameplayWithSelf:(int)indexOfSelf]];
     return newScene;
 }
 
-+(id)gameplayWithArray:(NSMutableArray*)theArray{
-    return [[self alloc]initWithAnArray:theArray];
++(id)gameplayWithSelf:(int)indexOfSelf{
+    return [[self alloc]initWithMySelfIndex:(int)indexOfSelf];
 }
 
--(id)initWithAnArray:(NSMutableArray*)theArray{
-    if((self = (Gameplay*) [CCBReader load:@"Gameplay"])){
-        _playerArray = theArray;
-        // Load Role Selection scene
-        CCScene *game = [RoleSelection sendTheArray:_playerArray];
-        [_loader addChild:game];
+-(id)initWithMySelfIndex:(int)indexOfSelf{
+    
+        indexOFMYSELF = indexOfSelf;
+    if((self = (Gameplay *) [CCBReader load:@"Gameplay"])){
+
     }
     return self;
 }
 
 -(void) didLoadFromCCB {
-    _playerArray = [NSMutableArray array];
-    self.userInteractionEnabled = true;
+    self.userInteractionEnabled = FALSE;
     
-//    // Load Role Selection scene
-//    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
-//    [_loader addChild:game];
+    // Load Role Selection scene
+    CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+    [_loader addChild:game];
+    RoleSelection *temp;
+    temp = _loader.children[0];
+    
+    temp.passedIndex = indexOFMYSELF;
+
 }
 
 - (id)init
@@ -67,26 +71,26 @@
 
 //- (void)assignRoles:(NSMutableArray*)players
 //{
-//    playersLeftToAssign = (int)players.count;
+//    playersLeftToAssign = players.count;
 //    if (players.count >= 11) {
-//        [self selectPlayerRole:@"Mafia" withValue:3];
+//        [self selectPlayerRole:@"mafia" withValue:3];
 //        playersLeftToAssign-= 3;
 //    }
 //    else if (players.count >= 7) {
-//        [self selectPlayerRole:@"Mafia" withValue:2];
+//        [self selectPlayerRole:@"mafia" withValue:2];
 //        playersLeftToAssign-= 2;
 //    }
 //    else if (players.count >= 4) {
-//        [self selectPlayerRole:@"Mafia" withValue:1];
+//        [self selectPlayerRole:@"mafia" withValue:1];
 //        playersLeftToAssign-= 1;
 //    }
-//    [self selectPlayerRole:@"Doctor" withValue:1];
-//    [self selectPlayerRole:@"Police" withValue:1];
+//    [self selectPlayerRole:@"doctor" withValue:1];
+//    [self selectPlayerRole:@"police" withValue:1];
 //    playersLeftToAssign -= 2;
-//    [self selectPlayerRole:@"Citizen" withValue:playersLeftToAssign];
+//    [self selectPlayerRole:@"citizen" withValue:playersLeftToAssign];
 //    
 //}
-//
+
 //- (void)selectPlayerRole: (NSString*)role withValue:(int)repeatValue
 //{
 //    for (int i = 0; i < repeatValue; i++) {
@@ -107,15 +111,15 @@
 
 - (void)update:(CCTime)delta
 {
-//    for (CCSprite *icon in _iconNode.children)
-//    {    // Load Role Selection scene
-//        CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
-//        [_loader addChild:game];
-//        if (CGRectContainsPoint(icon.boundingBox, touchLocation))
-//        {
-//            [myself performNightAction:[_playerArray indexOfObject:icon]];
-//        }
-//    }
+    //    for (CCSprite *icon in _iconNode.children)
+    //    {    // Load Role Selection scene
+    //        CCScene *game = [CCBReader loadAsScene:@"RoleSelection" owner:self];
+    //        [_loader addChild:game];
+    //        if (CGRectContainsPoint(icon.boundingBox, touchLocation))
+    //        {
+    //            [myself performNightAction:[_playerArray indexOfObject:icon]];
+    //        }
+    //    }
     
     for (Player* currentPlayer in _playerArray)
     {

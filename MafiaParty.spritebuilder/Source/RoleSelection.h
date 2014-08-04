@@ -17,8 +17,10 @@
 @property (nonatomic, strong) NSMutableArray *nounArray;
 @property (nonatomic, strong) NSMutableArray *verbArray;
 @property (nonatomic, strong) NSMutableArray *adjectiveArray;
+@property  (nonatomic,assign) int passedIndex;
 
 +(CCScene*)sendTheArray:(NSMutableArray*)theArray;
++(CCScene*)sendMySelf:(int)indexOfSelf;
 
 @property CCLabelTTF *nextLabel;
 @property CCButton *nextButton;
