@@ -34,7 +34,8 @@
 }
 
 -(id)initWithAnArray:(NSMutableArray*)theArray{
-    if((self = (Gameplay*) [CCBReader load:@"Gameplay"])){
+    if((self = (Gameplay*) [CCBReader load:@"Gameplay"]))
+    {
         _playerArray = theArray;
         // Load Role Selection scene
         CCScene *game = [RoleSelection sendTheArray:_playerArray];
