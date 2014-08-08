@@ -8,8 +8,14 @@
 
 #import "CCNode.h"
 
-@interface Lobby : CCNode
+@interface Lobby : CCNode{
+    NSNumber* playerIndex;
+}
 
-@property (strong, nonatomic) NSMutableArray *allPlayers;
+@property (strong, nonatomic) NSMutableArray *otherPlayers;
+@property (nonatomic,retain) NSNumber* playerIndex;
+
+
++(CCScene*)sendMySelf:(NSString*)UID;
 
 @end
