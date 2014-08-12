@@ -28,15 +28,25 @@
     NSString *myUniqueID;
     int indexOfSelf;
 }
-//@synthesize playerIndex;
 
-//- (id)init
-//{
-//    if (self = [super init]) {
-//        playerIndex = [[NSNumber alloc] initWithInt:indexOfSelf];
-//    }
-//    return self;
-//}
++(Lobby *)sharedInstance
+{
+    static dispatch_once_t predicate = 0;
+    __strong static id sharedObject = nil;
+    dispatch_once(&predicate, ^{
+        sharedObject = [[self alloc] init];
+    });
+    return sharedObject;
+}
+
+- (id)init
+{
+    if (self = [super init])
+    {
+        _playerIndex = [[NSNumber alloc] initWithInt:indexOfSelf];
+    }
+    return self;
+}
 
 - (void)dealloc{
     //empty method just in case

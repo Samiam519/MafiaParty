@@ -7,6 +7,7 @@
 //
 
 #import "Player.h"
+#import "Lobby.h"
 
 @implementation Player
 {
@@ -15,19 +16,10 @@
     NSMutableArray *lynchStrings;
     NSMutableArray *murderStrings;
     NSMutableArray *saveStrings;
+    NSNumber *me;
     
     // CCSprite *icon;
     Player *selectedPlayer;
-}
-
-+(NSNumber *)sharedInstance
-{
-    static dispatch_once_t predicate = 0;
-    __strong static id sharedObject = nil;
-    dispatch_once(&predicate, ^{
-        sharedObject = [[self alloc] init];
-    });
-    return sharedObject;
 }
 
 - (void)dealloc{
@@ -42,7 +34,7 @@
     
     // If intialized,
     if (self)
-        playerIndex = [[NSNumber alloc] initWithInt:indexOfSelf];
+        me = [Lobby sharedInstance].playerIndex;
         _alreadyPicked = FALSE;
     
     if ([_role isEqualToString:@"mafia"]) {

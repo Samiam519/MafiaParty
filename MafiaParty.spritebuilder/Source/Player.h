@@ -32,8 +32,6 @@
 
 @property (nonatomic, assign) int numVotes;
 
-+(NSNumber *)sharedInstance;
-
 // Set current player info
 - (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture;
 

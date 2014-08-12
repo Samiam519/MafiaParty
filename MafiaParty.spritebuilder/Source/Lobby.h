@@ -9,13 +9,12 @@
 #import "CCNode.h"
 
 @interface Lobby : CCNode{
-    NSNumber* playerIndex;
 }
 
 @property (strong, nonatomic) NSMutableArray *otherPlayers;
 @property (nonatomic,retain) NSNumber* playerIndex;
 
-
++(Lobby *)sharedInstance;
 +(CCScene*)sendMySelf:(NSString*)UID;
 
 @end

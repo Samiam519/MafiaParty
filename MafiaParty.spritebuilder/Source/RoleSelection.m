@@ -8,13 +8,12 @@
 
 #import "RoleSelection.h"
 #import "Player.h"
+#import "Lobby.h"
 
 @implementation RoleSelection
 {
     // Array of roles
     NSArray *_rolesArray;
-    
-
     
     // Player
     Player *player;
@@ -82,7 +81,7 @@
 
 +(CCScene*)sendMySelf:(int)indexOfSelf{
     CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithSelf:(int)indexOfSelf]];
+    [newScene addChild:[self gameplayWithSelf:[Lobby sharedInstance].playerIndex]];
     
     return newScene;
 }
