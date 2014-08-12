@@ -299,9 +299,9 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>320</real>
+							<real>1</real>
 							<real>180</real>
-							<integer>0</integer>
+							<integer>2</integer>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -450,6 +450,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3380,8 +3382,6 @@
 								<string>Player.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

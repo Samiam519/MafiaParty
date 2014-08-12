@@ -21,6 +21,7 @@
 		70C78AFB198DDAC7000B04AF /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78AFA198DDAC7000B04AF /* Store.m */; };
 		70C78B00198DDCB5000B04AF /* Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78AFF198DDCB5000B04AF /* Results.m */; };
 		70C78B03198DDD44000B04AF /* VoteScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C78B02198DDD44000B04AF /* VoteScreen.m */; };
+		70FA4D5E199ABF6D002F9DC2 /* launchscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FA4D5D199ABF6D002F9DC2 /* launchscreen.png */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		927F619E196C771E000F43EF /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7378993180767190076A88C /* MainScene.m */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
@@ -172,6 +173,7 @@
 		70C78AFF198DDCB5000B04AF /* Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Results.m; path = Source/Results.m; sourceTree = "<group>"; };
 		70C78B01198DDD44000B04AF /* VoteScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteScreen.h; sourceTree = "<group>"; };
 		70C78B02198DDD44000B04AF /* VoteScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteScreen.m; sourceTree = "<group>"; };
+		70FA4D5D199ABF6D002F9DC2 /* launchscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchscreen.png; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* MafiaPartyAndroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MafiaPartyAndroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CA5F4C198DB556008AD380 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				70FA4D5D199ABF6D002F9DC2 /* launchscreen.png */,
 				70C78AEC198DB936000B04AF /* Images-2.xcassets */,
 				5BA4619E1974C88900785744 /* AndroidManifest.xml */,
 				5B121033197485FE004C1E1D /* Android-Info.plist */,
@@ -716,6 +719,7 @@
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				706B9F65198E487900B9A0D1 /* stories.txt in Resources */,
+				70FA4D5E199ABF6D002F9DC2 /* launchscreen.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
