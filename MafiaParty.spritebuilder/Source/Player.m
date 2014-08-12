@@ -77,19 +77,19 @@
 {
     //Add code for getting strings
     
-    if ([_role isEqualToString:@"mafia"]) {
+    if ([_role isEqualToString:@"Mafia"]) {
         [self setDead:actionWithPlayer];
         // Kill player
     }
-    else if ([_role isEqualToString:@"doctor"]) {
+    else if ([_role isEqualToString:@"Doctor"]) {
         // Save player
         [self savePlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"police"]) {
+    else if ([_role isEqualToString:@"Police"]) {
         // Suspect player
         [self suspectPlayer:actionWithPlayer];
     }
-    else if ([_role isEqualToString:@"citizen"]) {
+    else if ([_role isEqualToString:@"Citizen"]) {
         
     }
     _turnEnded = TRUE;
@@ -98,13 +98,13 @@
 - (void)setDead: (Player*)player
 {
     // Die
-    _isDead = true;
+    player.isDead = true;
 }
 
 - (void)savePlayer: (Player*)player
 {
     // Save
-    _isSaved = true;
+    player.isSaved = true;
 }
 
 - (void)suspectPlayer: (Player*)player

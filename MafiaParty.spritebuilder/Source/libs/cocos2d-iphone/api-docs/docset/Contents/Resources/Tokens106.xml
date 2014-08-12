@@ -365,6 +365,26 @@ The value can be changed manually if you want to force a certain content scale.<
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCTexture/initWithCGImage:contentScale:</TokenIdentifier>
+			<Abstract type="html">Initializes and returns a texture from a CGImage object.</Abstract>
+			<DeclaredIn>CCTexture.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithCGImage:(CGImageRef)cgImage contentScale:(CGFloat)contentScale</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>cgImage</Name>
+					<Abstract type="html">CGImage to use for texture</Abstract>
+				</Parameter><Parameter>
+					<Name>contentScale</Name>
+					<Abstract type="html">Content scale.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized CCTexture object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithCGImage:contentScale:</Anchor>
+            <NodeRef refid="106"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/CCTexture/setDefaultAlphaPixelFormat:</TokenIdentifier>
 			<Abstract type="html">Sets the default pixel format for CGImages that contains alpha channel.</Abstract>
 			<DeclaredIn>CCTexture.h</DeclaredIn>
@@ -431,26 +451,6 @@ The value can be changed manually if you want to force a certain content scale.<
 			</Parameters>
 			<ReturnValue><Abstract type="html">Number of bits for pixelformat.</Abstract></ReturnValue>
 			<Anchor>//api/name/bitsPerPixelForFormat:</Anchor>
-            <NodeRef refid="106"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCTexture/initWithCGImage:contentScale:</TokenIdentifier>
-			<Abstract type="html">Initializes and returns a texture from a CGImage object.</Abstract>
-			<DeclaredIn>CCTexture.h</DeclaredIn>
-			
-			<Declaration>- (id)initWithCGImage:(CGImageRef)cgImage contentScale:(CGFloat)contentScale</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>cgImage</Name>
-					<Abstract type="html">CGImage to use for texture</Abstract>
-				</Parameter><Parameter>
-					<Name>contentScale</Name>
-					<Abstract type="html">Content scale.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized CCTexture object.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithCGImage:contentScale:</Anchor>
             <NodeRef refid="106"/>
 		</Token>
 		

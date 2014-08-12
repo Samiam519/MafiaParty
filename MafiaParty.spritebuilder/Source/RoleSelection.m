@@ -69,34 +69,18 @@
     // Set text field place holders ******* FIX THIS FUCKING BULLSHIT
     _nounTextField.textField.placeholder = @"test";
     
-    _nextLabel.string = @"Waiting for other players";
+    _nextLabel.string = @"Waiting for Input";
     _nextButton.enabled = FALSE;
-
-}
-
-+(CCScene*)sendTheArray:(NSMutableArray*)theArray{
-    CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithArray:theArray]];
-    return newScene;
-}
-
-+(id)gameplayWithArray:(NSMutableArray*)theArray{
-    return [[self alloc]initWithAnArray:theArray];
-}
-
--(id)initWithAnArray:(NSMutableArray*)theArray{
-    if((self = (RoleSelection*) [CCBReader load:@"RoleSelection"])){
-        [Lobby sharedInstance].otherPlayers = theArray;
-        for (int n = 0; n < [Lobby sharedInstance].otherPlayers.count; n++)
-        {
-            Player *childSprite = _iconNode.children[n];
-            Player *curPlayer = [Lobby sharedInstance].otherPlayers[n];
-            childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
-            childSprite.FBname = curPlayer.FBname;
-        }
-        [self assignRolesToArray:[Lobby sharedInstance].otherPlayers];
+    
+    for (int i = 0; i < [[Lobby sharedInstance].otherPlayers count]; i++)
+    {
+//        [_iconNode.children copy][i] = [Lobby sharedInstance].otherPlayers[i];
+        Player *childSprite = _iconNode.children[i];
+        Player *curPlayer = [Lobby sharedInstance].otherPlayers[i];
+        childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
+        childSprite.FBname = curPlayer.FBname;
+        childSprite.role = curPlayer.role;
     }
-    return self;
 }
 
 -(void)assignRolesToArray:(NSMutableArray *)players
@@ -151,6 +135,16 @@
         i++;
     }
     
+}
+
+-(id)init
+{
+    self = [super init];
+    if (self)
+    {
+        [self assignRolesToArray:[Lobby sharedInstance].otherPlayers];
+    }
+    return self;
 }
 
 -(int)randomNumberUpTo:(int)num
@@ -223,6 +217,7 @@
     {
         [self beACitizen];
     }
+    _nextLabel.string = @"Waiting for Other Players";
 }
 
 - (void)setDead: (Player*)player
@@ -255,19 +250,19 @@
 
 - (void)update:(CCTime)delta
 {
-    Player *curPlayer = [Lobby sharedInstance].otherPlayers[[Lobby sharedInstance].playerIndex.intValue];
-    //_roleLabel.string = curPlayer.role;
+    Player *myPlayer = [Lobby sharedInstance].otherPlayers[[Lobby sharedInstance].playerIndex.intValue];
+    _roleLabel.string = myPlayer.role;
 //    _roleLabel.string = ((Player *)_playerArray[[Lobby sharedInstance].playerIndex]).role;
-    if ([curPlayer.role isEqualToString:@"Mafia"]){
+    if ([myPlayer.role isEqualToString:@"Mafia"]){
         _RoleTaskLabel.string = @"Who do you want to kill?";
     }
-    else if ([curPlayer.role isEqualToString:@"Doctor"]){
+    else if ([myPlayer.role isEqualToString:@"Doctor"]){
         _RoleTaskLabel.string = @"Who do you want to save?";
     }
-    else if ([curPlayer.role isEqualToString:@"Police"]){
+    else if ([myPlayer.role isEqualToString:@"Police"]){
         _RoleTaskLabel.string = @"Who do you want to investigate?";
     }
-    else if ([curPlayer.role isEqualToString:@"Citizen"]){
+    else if ([myPlayer.role isEqualToString:@"Citizen"]){
         _RoleTaskLabel.string = @"Sillly citizen, you can't do anything";
     }
     for (Player* curPlayer in _iconNode.children)
@@ -277,7 +272,7 @@
             if (touchActivated)
             {
                 CCLOG(@"You touched %@", curPlayer.FBname);
-                //[myself performNightAction: curPlayer];
+                [myPlayer performNightAction: curPlayer];
             }
         }
     }

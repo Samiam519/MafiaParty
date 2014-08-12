@@ -2253,19 +2253,6 @@ property, see cascadeColorEnabled for color tint changes.</Abstract>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/CCNode/physicsNode</TokenIdentifier>
-			<Abstract type="html">Nearest CCPhysicsNode ancestor of this node, or nil if none.
-Unlike CCPhysicsBody.physicsNode, this will return a value before onEnter is called on the node.</Abstract>
-			<DeclaredIn>CCPhysicsNode.h</DeclaredIn>
-			
-			<Declaration>- (CCPhysicsNode *)physicsNode</Declaration>
-			
-			
-			<Anchor>//api/name/physicsNode</Anchor>
-            <NodeRef refid="80"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/CCNode/walkSceneGraph:</TokenIdentifier>
 			<Abstract type="html">Prints on the debug console the scene graph</Abstract>
 			<DeclaredIn>CCNode+Debug.h</DeclaredIn>
@@ -2279,6 +2266,19 @@ Unlike CCPhysicsBody.physicsNode, this will return a value before onEnter is cal
 			</Parameters>
 			
 			<Anchor>//api/name/walkSceneGraph:</Anchor>
+            <NodeRef refid="80"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCNode/physicsNode</TokenIdentifier>
+			<Abstract type="html">Nearest CCPhysicsNode ancestor of this node, or nil if none.
+Unlike CCPhysicsBody.physicsNode, this will return a value before onEnter is called on the node.</Abstract>
+			<DeclaredIn>CCPhysicsNode.h</DeclaredIn>
+			
+			<Declaration>- (CCPhysicsNode *)physicsNode</Declaration>
+			
+			
+			<Anchor>//api/name/physicsNode</Anchor>
             <NodeRef refid="80"/>
 		</Token>
 		
