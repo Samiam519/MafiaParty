@@ -20,7 +20,6 @@
 @property  (nonatomic,assign) int passedIndex;
 
 +(CCScene*)sendTheArray:(NSMutableArray*)theArray;
-+(CCScene*)sendMySelf:(int)indexOfSelf;
 
 @property CCLabelTTF *nextLabel;
 @property CCButton *nextButton;

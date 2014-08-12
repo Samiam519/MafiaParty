@@ -15,6 +15,5 @@
 @property (nonatomic,retain) NSNumber* playerIndex;
 
 +(Lobby *)sharedInstance;
-+(CCScene*)sendMySelf:(NSString*)UID;
 
 @end

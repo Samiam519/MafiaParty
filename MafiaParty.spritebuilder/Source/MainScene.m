@@ -112,7 +112,7 @@ static NSCache *profilePictureCache;
 }
 
 -(void) toTheLobby {
-    CCScene *lobby = [Lobby sendMySelf:addUserRefID];
+    CCScene *lobby = (CCScene*)[CCBReader loadAsScene:@"Lobby"];
     [[CCDirector sharedDirector] replaceScene:lobby];
 }
 

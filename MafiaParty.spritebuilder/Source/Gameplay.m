@@ -9,6 +9,7 @@
 #import "Gameplay.h"
 #import "Player.h"
 #import "RoleSelection.h"
+#import "Lobby.h"
 
 @implementation Gameplay
 {
@@ -24,15 +25,9 @@
     NSMutableArray *_playerArray;
 }
 
-+(CCScene*)sendMySelf:(int)indexOfSelf{
-    CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithSelf:(int)indexOfSelf]];
-    return newScene;
-}
-
-+(id)gameplayWithSelf:(int)indexOfSelf{
-    return [[self alloc]initWithMySelfIndex:(int)indexOfSelf];
-}
+//+(id)gameplayWithSelf:(int)indexOfSelf{
+//    return [[self alloc]initWithMySelfIndex:(int)indexOfSelf];
+//}
 
 -(id)initWithMySelfIndex:(int)indexOfSelf{
     
@@ -51,8 +46,8 @@
     [_loader addChild:game];
     RoleSelection *temp;
     temp = _loader.children[0];
-    
-    temp.passedIndex = indexOFMYSELF;
+//    
+//    temp.passedIndex = indexOFMYSELF;
 
 }
 

@@ -9,6 +9,7 @@
 #import "RoleSelection.h"
 #import "Player.h"
 #import "Lobby.h"
+#import "Gameplay.h"
 
 @implementation RoleSelection
 {
@@ -46,7 +47,7 @@
 
 -(void)didLoadFromCCB
 {
-    playersLeftToAssign = _playerArray.count;
+    playersLeftToAssign = [Lobby sharedInstance].otherPlayers.count;
     self.userInteractionEnabled = true;
     
     //init playerArray
@@ -79,28 +80,21 @@
     return newScene;
 }
 
-+(CCScene*)sendMySelf:(int)indexOfSelf{
-    CCScene *newScene = [CCScene node];
-    [newScene addChild:[self gameplayWithSelf:[Lobby sharedInstance].playerIndex]];
-    
-    return newScene;
-}
-
 +(id)gameplayWithArray:(NSMutableArray*)theArray{
     return [[self alloc]initWithAnArray:theArray];
 }
 
 -(id)initWithAnArray:(NSMutableArray*)theArray{
     if((self = (RoleSelection*) [CCBReader load:@"RoleSelection"])){
-        _playerArray = theArray;
-        for (int n = 0; n < _playerArray.count; n++)
+        [Lobby sharedInstance].otherPlayers = theArray;
+        for (int n = 0; n < [Lobby sharedInstance].otherPlayers.count; n++)
         {
             Player *childSprite = _iconNode.children[n];
-            Player *curPlayer = _playerArray[n];
+            Player *curPlayer = [Lobby sharedInstance].otherPlayers[n];
             childSprite.icon.spriteFrame = curPlayer.icon.spriteFrame;
             childSprite.FBname = curPlayer.FBname;
         }
-        [self assignRolesToArray:_playerArray];
+        [self assignRolesToArray:[Lobby sharedInstance].otherPlayers];
     }
     return self;
 }
@@ -261,24 +255,21 @@
 
 - (void)update:(CCTime)delta
 {
-    _roleLabel.string = ((Player *)_playerArray[_passedIndex]).role;
-    if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Mafia"])
-    {
+    Player *curPlayer = [Lobby sharedInstance].otherPlayers[[Lobby sharedInstance].playerIndex.intValue];
+    //_roleLabel.string = curPlayer.role;
+//    _roleLabel.string = ((Player *)_playerArray[[Lobby sharedInstance].playerIndex]).role;
+    if ([curPlayer.role isEqualToString:@"Mafia"]){
         _RoleTaskLabel.string = @"Who do you want to kill?";
     }
-    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Doctor"])
-    {
+    else if ([curPlayer.role isEqualToString:@"Doctor"]){
         _RoleTaskLabel.string = @"Who do you want to save?";
     }
-    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Police"])
-    {
+    else if ([curPlayer.role isEqualToString:@"Police"]){
         _RoleTaskLabel.string = @"Who do you want to investigate?";
     }
-    else if ([((Player *)_playerArray[_passedIndex]).role isEqualToString:@"Citizen"])
-    {
-        _RoleTaskLabel.string = @"Silly citizen, you can't do anything";
+    else if ([curPlayer.role isEqualToString:@"Citizen"]){
+        _RoleTaskLabel.string = @"Sillly citizen, you can't do anything";
     }
-    
     for (Player* curPlayer in _iconNode.children)
     {
         if (CGRectContainsPoint(curPlayer.boundingBox, touchLocation))
@@ -291,7 +282,7 @@
         }
     }
     
-    for (Player *currentPlayer in _playerArray)
+    for (Player *currentPlayer in [Lobby sharedInstance].otherPlayers)
     {
         if (!currentPlayer.turnEnded)
         {

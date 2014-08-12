@@ -13,6 +13,5 @@
 // Other Players Array
 @property (nonatomic, strong) NSMutableArray *playerArray;
 
-+(CCScene*)sendMySelf:(int)indexOfSelf;
 
 @end
