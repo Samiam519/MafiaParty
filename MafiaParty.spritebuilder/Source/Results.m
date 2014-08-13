@@ -8,6 +8,7 @@
 
 #import "Results.h"
 #import "RoleSelection.h"
+#import "Player.h"
 
 @implementation Results
 {
@@ -34,26 +35,29 @@
 
 - (void)didLoadFromCCB
 {
-    // Initialize arrays
-    _eachLine = [[NSArray alloc] init];
-    _nounsToRemove = [[NSArray alloc] init];
-    _verbsToRemove = [[NSArray alloc] init];
-    _adjectivesToRemove = [[NSArray alloc] init];
-    
-    // Shit to remove
     
     
-    // Create instance on Role Selection
-    RoleSelection *roleSelectionContent = [[RoleSelection alloc] init];
     
-    // Read in content from txt file
-    _path = [[NSBundle mainBundle] pathForResource:@"stories" ofType:@"txt"];
-    _allContent = [NSString stringWithContentsOfFile:_path encoding:NSUTF8StringEncoding error:NULL];
-    _eachLine = [_allContent componentsSeparatedByString:@"\n"];
-    
-    // Load Stories and shit
-    randomIndex = arc4random() % [_eachLine count];
-    _storyLabel.string = _eachLine[randomIndex];
+//    // Initialize arrays
+//    _eachLine = [[NSArray alloc] init];
+//    _nounsToRemove = [[NSArray alloc] init];
+//    _verbsToRemove = [[NSArray alloc] init];
+//    _adjectivesToRemove = [[NSArray alloc] init];
+//    
+//    // Shit to remove
+//    
+//    
+//    // Create instance on Role Selection
+//    RoleSelection *roleSelectionContent = [[RoleSelection alloc] init];
+//    
+//    // Read in content from txt file
+//    _path = [[NSBundle mainBundle] pathForResource:@"stories" ofType:@"txt"];
+//    _allContent = [NSString stringWithContentsOfFile:_path encoding:NSUTF8StringEncoding error:NULL];
+//    _eachLine = [_allContent componentsSeparatedByString:@"\n"];
+//    
+//    // Load Stories and shit
+//    randomIndex = arc4random() % [_eachLine count];
+//    _storyLabel.string = _eachLine[randomIndex];
     
     // Find all nouns in the story and replace them
 //    for(NSString *noun in _eachLine[randomIndex])
@@ -124,6 +128,14 @@
         // Present the feed dialog
         
     }
+}
+
+-(void)update:(CCTime)delta
+{
+    NSString *story = [NSString stringWithFormat:@"%@ was found last night strangled with their own <noun>. The story went like this: the <noun> was <adjective> and <adjective>, so %@ decided to whip out the ol' <noun> and a picture of <noun> and get hammered. Unfortunately, as %@ began to <verb>, they noticed someone in the corner of their vision. The mafia knocked %@ out with a <noun>, and they got to work. %@ was discovered earlier this morning.", _deadPlayer.FBname, _deadPlayer.FBname, _deadPlayer.FBname, _deadPlayer.FBname, _deadPlayer.FBname];
+    
+    _storyLabel.string = story;
+    
 }
 
 @end

@@ -19,8 +19,6 @@
 @property (nonatomic, strong) NSMutableArray *adjectiveArray;
 @property  (nonatomic,assign) int passedIndex;
 
-+(CCScene*)sendTheArray:(NSMutableArray*)theArray;
-
 @property CCLabelTTF *nextLabel;
 @property CCButton *nextButton;
 

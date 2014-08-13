@@ -60,6 +60,7 @@
             //convert UIImage to CCSprite
             CCTexture *texture = [[CCTexture alloc]initWithCGImage:image.CGImage contentScale:1.f];
             newImage.spriteFrame = [CCSpriteFrame frameWithTexture:texture rectInPixels:CGRectMake(0.f, 0.f, 50.f, 50.f) rotated:NO offset:ccp(1,1) originalSize:CGSizeMake(1.f, 1.f)];
+            newImage.scale = 1;
             [newPlayer setMe:snapshot.value[@"Name"] andMyPicture:newImage];
             
             [_otherPlayers addObject:newPlayer];

@@ -8,6 +8,10 @@
 
 #import "CCNode.h"
 
+@class Player;
+
 @interface Results : CCNode
+
+@property Player *deadPlayer;
 
 @end

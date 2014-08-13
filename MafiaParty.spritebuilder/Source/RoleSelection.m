@@ -10,6 +10,7 @@
 #import "Player.h"
 #import "Lobby.h"
 #import "Gameplay.h"
+#import "Results.h"
 
 @implementation RoleSelection
 {
@@ -43,6 +44,8 @@
     CGPoint touchLocation;
     bool touchActivated;
     int playersLeftToAssign;
+    
+    Player *chosenForDEATH;
 }
 
 -(void)didLoadFromCCB
@@ -160,8 +163,13 @@
 - (void)next
 {
     // Load Results Scene
-    CCScene *results = (CCScene *)[CCBReader loadAsScene:@"Results"];
-    [[CCDirector sharedDirector] replaceScene:results];
+    Results *results = (Results *)[CCBReader load:@"Results"];
+//    Results *page = results.children[0];
+//    page.deadPlayer = chosenForDEATH;
+    results.deadPlayer = chosenForDEATH;
+    CCScene *empty = [CCScene alloc];
+    [empty addChild:results];
+    [[CCDirector sharedDirector] replaceScene:empty];
 }
 
 #pragma mark - Word Getters
@@ -263,7 +271,8 @@
         _RoleTaskLabel.string = @"Who do you want to investigate?";
     }
     else if ([myPlayer.role isEqualToString:@"Citizen"]){
-        _RoleTaskLabel.string = @"Sillly citizen, you can't do anything";
+        _RoleTaskLabel.string = @"Silly citizen, you can't do anything";
+        _RoleTaskLabel.fontSize = 25;
     }
     for (Player* curPlayer in _iconNode.children)
     {
@@ -273,13 +282,18 @@
             {
                 CCLOG(@"You touched %@", curPlayer.FBname);
                 [myPlayer performNightAction: curPlayer];
+                if ([myPlayer.role isEqualToString:@"Mafia"])
+                {
+                    chosenForDEATH = curPlayer;
+                }
+                _nextLabel.string = @"Waiting for other players...";
             }
         }
     }
     
     for (Player *currentPlayer in [Lobby sharedInstance].otherPlayers)
     {
-        if (!currentPlayer.turnEnded)
+        if (currentPlayer.turnEnded)
         {
             return;
         }

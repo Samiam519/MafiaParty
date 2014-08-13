@@ -33,10 +33,18 @@
     
     
     // If intialized,
-    if (self)
+    if (self){
         me = [Lobby sharedInstance].playerIndex;
         _alreadyPicked = FALSE;
-    
+        _role = @"Citizen";
+        _numVotes = 0;
+    }
+    return self;
+}
+
+-(void)didLoadFromCCB
+{
+    //
     if ([_role isEqualToString:@"mafia"]) {
         _canKill = TRUE;
         _canSave = FALSE;
@@ -57,13 +65,7 @@
         _canSave = FALSE;
         _canSuspect = FALSE;
     }
-    return self;
-}
-
--(void)didLoadFromCCB
-{
-    _role = @"Citizen";
-    _numVotes = 0;
+    //
 }
 
 - (void)setMe:(NSString*)myName andMyPicture:(CCSprite*)myPicture
